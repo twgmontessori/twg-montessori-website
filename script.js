@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       for (const [key, value] of data.entries()) {
         lines.push(`${key}: ${value}`);
       }
-      const subject = encodeURIComponent('Tour Inquiry - Together We Grow Montessori School');
-      const body = encodeURIComponent(`Hello Together We Grow Montessori School,\n\nI would like to submit a tour / waitlist inquiry.\n\n${lines.join('\n')}\n\nThank you.`);
+      
      try {
   const response = await fetch("/api/tour", {
     method: "POST",
