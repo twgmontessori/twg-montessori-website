@@ -1,24 +1,23 @@
-const reveals = document.querySelectorAll('.section-reveal');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.12 });
-reveals.forEach(el => observer.observe(el));
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.section-reveal').forEach(el => observer.observe(el));
 
-const menuButton = document.querySelector('.menu-button');
-const nav = document.querySelector('.nav');
-menuButton?.addEventListener('click', () => {
-  const open = nav.style.display === 'flex';
-  nav.style.display = open ? 'none' : 'flex';
-  nav.style.position = 'absolute';
-  nav.style.top = '74px';
-  nav.style.left = '18px';
-  nav.style.right = '18px';
-  nav.style.flexDirection = 'column';
-  nav.style.alignItems = 'stretch';
-  nav.style.background = 'rgba(252,250,246,.98)';
-  nav.style.padding = '18px';
-  nav.style.borderRadius = '22px';
-  nav.style.boxShadow = '0 20px 50px rgba(0,0,0,.12)';
+  const form = document.getElementById('tourForm');
+  if (form) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const lines = [];
+      for (const [key, value] of data.entries()) {
+        lines.push(`${key}: ${value}`);
+      }
+      const subject = encodeURIComponent('Tour Inquiry - Together We Grow Montessori School');
+      const body = encodeURIComponent(`Hello Together We Grow Montessori School,\n\nI would like to submit a tour / waitlist inquiry.\n\n${lines.join('\n')}\n\nThank you.`);
+      window.location.href = `mailto:cchan@twgmontessori.ca?subject=${subject}&body=${body}`;
+    });
+  }
 });
