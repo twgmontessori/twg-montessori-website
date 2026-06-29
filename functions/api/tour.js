@@ -43,40 +43,20 @@ Questions:
 ${questions}
 `;
 
-  const response = await fetch("https://api.mailchannels.net/tx/v1/send", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      personalizations: [
-        {
-          to: [
-            {
-              email: "info@twgmontessori.ca",
-              name: "Together We Grow Montessori School"
-            }
-          ]
-        }
-      ],
-      from: {
-        email: "noreply@twgmontessori.ca",
-        name: "Together We Grow Website"
-      },
-      reply_to: {
-        email,
-        name: parentName
-      },
-      subject: `New Tour Inquiry - ${parentName}`,
-      content: [
-        {
-          type: "text/plain",
-          value: message
-        }
-      ]
-    })
-  });
-
+const response = await fetch("https://api.resend.com/emails", {
+  method: "POST",
+  headers: {
+    "Authorization": `Bearer ${context.env.RESEND_API_KEY}`,
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    from: "Together We Grow Website <noreply@twgmontessori.ca>",
+    to: ["info@twgmontessori.ca"],
+    reply_to: email,
+    subject: `New Tour Inquiry - ${parentName}`,
+    text: message
+  })
+});
   if (!response.ok) {
     return new Response("Failed", { status: 500 });
   }
