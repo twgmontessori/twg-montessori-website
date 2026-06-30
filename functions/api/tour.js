@@ -66,9 +66,14 @@ Together We Grow Montessori School
 Unit 200 – 604 West Broadway
 Vancouver, BC V5Z 1G1
 
-604-657-8289
-info@twgmontessori.ca
-www.twgmontessori.ca
+📍 Unit 200 – 604 West Broadway
+   Vancouver, BC V5Z 1G1
+
+☎ 604-657-8289
+
+✉ info@twgmontessori.ca
+
+🌐 www.twgmontessori.ca
 
 Nurturing independence. Inspiring a lifelong love of learning.`;
 
@@ -129,7 +134,11 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
 style="display:block;border:0;margin:0 0 30px;"
 >
 
-            <hr style="border:none;border-top:1px solid #efd7c5;margin:22px 0;">
+           <hr style="
+  border:none;
+  border-top:1px solid #edd9cb;
+  margin:26px 0 30px;
+">
 
             <p style="font-size:14px;line-height:1.7;margin:0;color:#333;">
               <strong>Unit 200 – 604 West Broadway</strong><br>
@@ -141,12 +150,21 @@ style="display:block;border:0;margin:0 0 30px;"
           </td>
         </tr>
 
-        <tr>
-          <td align="center" style="background:#fdeee2;padding:22px 18px;font-family:Arial,Helvetica,sans-serif;color:#5f5f5f;font-size:12px;line-height:1.8;letter-spacing:2px;">
-            NURTURING INDEPENDENCE.<br>
-            INSPIRING A LIFELONG LOVE OF LEARNING.
-          </td>
-        </tr>
+      <tr>
+  <td align="center"
+      style="background:#fdeee2;
+             padding:24px 20px;
+             font-family:Georgia,'Times New Roman',serif;
+             color:#8a6b4f;
+             font-size:16px;
+             line-height:1.8;
+             font-style:italic;">
+
+    Nurturing Independence.<br>
+    Inspiring a Lifelong Love of Learning.
+
+  </td>
+</tr>
 
       </table>
     </td>
