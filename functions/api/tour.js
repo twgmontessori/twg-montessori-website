@@ -122,9 +122,9 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
             </p>
 
             <p style="font-size:16px;line-height:1.7;margin:0 0 6px;">Warm regards,</p>
-            <p style="font-size:18px;line-height:1.5;font-weight:bold;margin:0 0 24px;color:#c9954a;">
-              Together We Grow Montessori School
-            </p>
+           <p style="font-size:30px;line-height:1.2;margin:0 0 24px;color:#c9954a;font-family:'Brush Script MT','Segoe Script','Lucida Handwriting',cursive;">
+  Together We Grow Montessori School
+</p>
 
             <hr style="border:none;border-top:1px solid #efd7c5;margin:22px 0;">
 
