@@ -81,7 +81,7 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
         <tr>
           <td align="center" style="padding:0;background:#fff7ef;">
             <img
-              src="https://www.twgmontessori.ca/assets/email_header.png.png"
+              src="https://www.twgmontessori.ca/assets/email_header.png"
               alt="Together We Grow Montessori School"
               width="640"
               style="display:block;width:100%;max-width:640px;height:auto;border:0;"
