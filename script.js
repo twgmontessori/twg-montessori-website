@@ -13,6 +13,32 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
 
+      const emailInput = form.querySelector('[name="Email"]');
+      const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
+
+      const typoFixes = {
+        'qq.cpm': 'qq.com',
+        'gamil.com': 'gmail.com',
+        'hotmial.com': 'hotmail.com',
+        'hotmai.com': 'hotmail.com',
+        'outlok.com': 'outlook.com',
+        'outloo.com': 'outlook.com'
+      };
+
+      const domain = email.split('@')[1];
+
+      if (domain && typoFixes[domain]) {
+        const correctedEmail = email.replace(domain, typoFixes[domain]);
+        const confirmFix = confirm(`Did you mean ${correctedEmail}?`);
+
+        if (confirmFix) {
+          emailInput.value = correctedEmail;
+        } else {
+          emailInput.focus();
+          return;
+        }
+      }
+
       const submitButton = form.querySelector('button[type="submit"]');
       const originalButtonText = submitButton ? submitButton.textContent : '';
 
