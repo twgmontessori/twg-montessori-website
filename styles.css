@@ -332,3 +332,26 @@ body{
   .hero-restore-1 .hero-logo{width:150px!important}
   .script-title{font-size:3.2rem!important;line-height:1.08!important}
 }
+.form-message{
+    display:none;
+    margin:20px 0;
+    padding:18px 22px;
+    border-radius:12px;
+    font-size:16px;
+    line-height:1.6;
+    text-align:center;
+}
+
+.form-message.success{
+    display:block;
+    background:#f7f3eb;
+    border:1px solid #d8c3a3;
+    color:#1f2f33;
+}
+
+.form-message.error{
+    display:block;
+    background:#fff3f3;
+    border:1px solid #f1b7b7;
+    color:#9b2f2f;
+}
