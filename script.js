@@ -4,33 +4,50 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   }, { threshold: 0.12 });
+
   document.querySelectorAll('.section-reveal').forEach(el => observer.observe(el));
 
   const form = document.getElementById('tourForm');
+
   if (form) {
-    form.addEventListener('submit',async (event) => {
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
-      const data = new FormData(form);
-      const lines = [];
-      for (const [key, value] of data.entries()) {
-        lines.push(`${key}: ${value}`);
+
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton ? submitButton.textContent : '';
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Submitting...';
       }
-      
-     try {
-  const response = await fetch("/api/tour", {
-    method: "POST",
-    body: data
-  });
 
-  if (!response.ok) {
-    throw new Error("Form submission failed");
-  }
+      const data = new FormData(form);
 
-  form.reset();
-  alert("Thank you! Your inquiry has been sent. We will contact you shortly.");
-} catch (error) {
-  alert("Sorry, your inquiry could not be sent. Please email us at info@twgmontessori.ca.");
-}
+      try {
+        const response = await fetch('/api/tour', {
+          method: 'POST',
+          body: data
+        });
+
+        if (!response.ok) {
+          throw new Error('Form submission failed');
+        }
+
+        form.reset();
+
+        alert(
+          'Thank you! Your inquiry has been successfully received. We look forward to connecting with your family within 1–2 business days.'
+        );
+      } catch (error) {
+        alert(
+          'Sorry, something went wrong. Please try again or email us at info@twgmontessori.ca.'
+        );
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      }
     });
   }
 });
