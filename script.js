@@ -77,13 +77,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         form.reset();
 
-        alert(
-          'Thank you! Your inquiry has been successfully received. We look forward to connecting with your family within 1–2 business days.'
-        );
+       const message = document.getElementById("formMessage");
+
+message.className = "form-message success";
+
+message.innerHTML =
+"<strong>✓ Thank you!</strong><br>Your inquiry has been successfully received. We look forward to connecting with your family within <strong>1–2 business days</strong>.";
+
+message.scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+});
       } catch (error) {
-        alert(
-          'Sorry, something went wrong. Please try again or email us at info@twgmontessori.ca.'
-        );
+       const message = document.getElementById("formMessage");
+
+message.className = "form-message error";
+
+message.innerHTML =
+"<strong>Unable to submit.</strong><br>Please try again or email us directly at <strong>info@twgmontessori.ca</strong>.";
+
+message.scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+});
       } finally {
         if (submitButton) {
           submitButton.disabled = false;
