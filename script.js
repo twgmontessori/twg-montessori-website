@@ -76,7 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         form.reset();
-
+// Google Analytics 4 - Track Inquiry Conversion
+if (typeof gtag === "function") {
+  gtag("event", "generate_lead", {
+    event_category: "Inquiry",
+    event_label: "Website Tour Form",
+    value: 1
+  });
+}
        const message = document.getElementById("formMessage");
 
 message.className = "form-message success";
