@@ -10,6 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('tourForm');
 
   if (form) {
+    const phoneInput = form.querySelector('[name="Phone"]');
+
+    if (phoneInput) {
+      phoneInput.addEventListener('input', () => {
+        let digits = phoneInput.value.replace(/\D/g, '').slice(0, 10);
+
+        if (digits.length > 6) {
+          phoneInput.value = `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+        } else if (digits.length > 3) {
+          phoneInput.value = `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+        } else if (digits.length > 0) {
+          phoneInput.value = `(${digits}`;
+        }
+      });
+    }
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
 
