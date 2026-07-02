@@ -32,14 +32,37 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailInput = form.querySelector('[name="Email"]');
       const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
 
-      const typoFixes = {
-        'qq.cpm': 'qq.com',
-        'gamil.com': 'gmail.com',
-        'hotmial.com': 'hotmail.com',
-        'hotmai.com': 'hotmail.com',
-        'outlok.com': 'outlook.com',
-        'outloo.com': 'outlook.com'
-      };
+     const typoFixes = {
+  'qq.cpm': 'qq.com',
+  'qq.cop': 'qq.com',
+
+  'gamil.com': 'gmail.com',
+  'gmial.com': 'gmail.com',
+  'gmail.cpm': 'gmail.com',
+  'gmail.cop': 'gmail.com',
+  'gmail.con': 'gmail.com',
+  'gmail.co': 'gmail.com',
+
+  'hotmial.com': 'hotmail.com',
+  'hotmai.com': 'hotmail.com',
+  'hotmail.cpm': 'hotmail.com',
+  'hotmail.cop': 'hotmail.com',
+  'hotmail.con': 'hotmail.com',
+
+  'outlok.com': 'outlook.com',
+  'outloo.com': 'outlook.com',
+  'outlook.cpm': 'outlook.com',
+  'outlook.cop': 'outlook.com',
+  'outlook.con': 'outlook.com',
+
+  'icloud.cpm': 'icloud.com',
+  'icloud.cop': 'icloud.com',
+  'icloud.con': 'icloud.com',
+
+  'yahoo.cpm': 'yahoo.com',
+  'yahoo.cop': 'yahoo.com',
+  'yahoo.con': 'yahoo.com'
+};
 
       const domain = email.split('@')[1];
 
