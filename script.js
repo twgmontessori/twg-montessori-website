@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 } else {
   emailInput.focus();
   return;
+  }
 }
 
       const submitButton = form.querySelector('button[type="submit"]');
