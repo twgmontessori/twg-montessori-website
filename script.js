@@ -145,6 +145,7 @@ document.querySelectorAll('a[href="#tour"]').forEach((link) => {
   link.addEventListener("click", () => {
     if (typeof gtag === "function") {
       gtag("event", "book_tour_click", {
+        debug_mode: true,
         event_category: "Engagement",
         event_label: "Book a Tour Button"
       });
