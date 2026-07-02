@@ -70,12 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const correctedEmail = email.replace(domain, typoFixes[domain]);
         const confirmFix = confirm(`Did you mean ${correctedEmail}?`);
 
-        if (confirmFix) {
-          emailInput.value = correctedEmail;
-        } else {
-          emailInput.focus();
-          return;
-        }
+      if (confirmFix) {
+  emailInput.value = correctedEmail.trim().toLowerCase();
+} else {
+  emailInput.focus();
+  return;
+}
       }
 
       const submitButton = form.querySelector('button[type="submit"]');
