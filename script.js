@@ -174,4 +174,67 @@ document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
     }
   });
 });
+// GA4 - Scroll Depth Tracking
+const scrollMarks = [25, 50, 75, 90];
+const scrollTracked = {};
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+  if (docHeight <= 0) return;
+
+  const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+  scrollMarks.forEach((mark) => {
+    if (scrollPercent >= mark && !scrollTracked[mark]) {
+      scrollTracked[mark] = true;
+
+      if (typeof gtag === "function") {
+        gtag("event", `scroll_${mark}`, {
+          debug_mode: true,
+          event_category: "Engagement",
+          event_label: `${mark}% Scroll`
+        });
+      }
+    }
+  });
+});
+
+// GA4 - Contact Click Tracking
+document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "phone_click", {
+        debug_mode: true,
+        event_category: "Contact",
+        event_label: link.href
+      });
+    }
+  });
+});
+
+document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "email_click", {
+        debug_mode: true,
+        event_category: "Contact",
+        event_label: link.href
+      });
+    }
+  });
+});
+
+document.querySelectorAll('a[href*="google.com/maps"], a[href*="maps.google.com"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "map_click", {
+        debug_mode: true,
+        event_category: "Contact",
+        event_label: link.href
+      });
+    }
+  });
+});
 });
