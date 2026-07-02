@@ -72,11 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (confirmFix) {
   emailInput.value = correctedEmail.trim().toLowerCase();
+  emailInput.dispatchEvent(new Event("input", { bubbles: true }));
 } else {
   emailInput.focus();
   return;
 }
-      }
 
       const submitButton = form.querySelector('button[type="submit"]');
       const originalButtonText = submitButton ? submitButton.textContent : '';
@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const data = new FormData(form);
+data.set("Email", emailInput.value.trim().toLowerCase());
 
       try {
         const response = await fetch('/api/tour', {
