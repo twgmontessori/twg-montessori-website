@@ -22,7 +22,14 @@ export async function onRequestPost(context) {
   }
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const commonTypos = ["qq.cpm", "gamil.com", "hotmial.com", "hotmai.com"];
+ const commonTypos = [
+  "qq.cpm", "qq.cop",
+  "gamil.com", "gmial.com", "gmail.cpm", "gmail.cop", "gmail.con", "gmail.co",
+  "hotmial.com", "hotmai.com", "hotmail.cpm", "hotmail.cop", "hotmail.con",
+  "outlok.com", "outloo.com", "outlook.cpm", "outlook.cop", "outlook.con",
+  "icloud.cpm", "icloud.cop", "icloud.con",
+  "yahoo.cpm", "yahoo.cop", "yahoo.con"
+];
 
   if (!emailPattern.test(email) || commonTypos.some((typo) => email.includes(typo))) {
     return new Response(JSON.stringify({
