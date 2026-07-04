@@ -367,46 +367,67 @@ body{
 /* Parent Resources */
 
 .resources{
-    padding:90px 0;
-    background:#fffdf8;
+    padding:100px 0;
+    background:linear-gradient(180deg,#fffdf8 0%,#fff7ef 100%);
 }
 
 .resource-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-    margin-top:45px;
+    gap:34px;
+    margin-top:50px;
 }
 
 .resource-card{
-    background:#fff;
-    padding:38px;
-    border-radius:20px;
-    box-shadow:0 10px 35px rgba(0,0,0,.08);
-    transition:.3s;
+    background:rgba(255,255,255,.92);
+    padding:42px;
+    border-radius:32px;
+    border:1px solid rgba(32,51,55,.10);
+    box-shadow:0 24px 70px rgba(32,51,55,.08);
+    transition:.28s ease;
 }
 
 .resource-card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-7px);
+    box-shadow:0 30px 80px rgba(32,51,55,.12);
+}
+
+.resource-icon{
+    width:64px;
+    height:64px;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;
+    background:#fff3ea;
+    margin-bottom:22px;
 }
 
 .resource-card h3{
-    margin-bottom:18px;
+    font-size:1.55rem;
+    margin:10px 0 16px;
+    color:#203337;
 }
 
 .resource-card p{
-    color:#666;
+    color:#6B5D58;
     line-height:1.8;
 }
 
-.resource-card a{
+.resource-button{
     display:inline-block;
-    margin-top:18px;
-    font-weight:700;
-    color:#c94f73;
+    margin-top:22px;
+    padding:13px 22px;
+    border-radius:999px;
+    background:#d64667;
+    color:#fff !important;
+    font-weight:800;
     text-decoration:none;
+    box-shadow:0 14px 34px rgba(214,70,103,.22);
 }
 
-.resource-card a:hover{
-    text-decoration:underline;
+.resource-button:hover{
+    transform:translateY(-2px);
+    text-decoration:none;
 }
