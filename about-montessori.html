@@ -226,6 +226,76 @@
         padding: 30px;
       }
     }
+  /* ---------- Breadcrumb ---------- */
+
+.breadcrumb{
+    width:min(1120px,92%);
+    margin:110px auto 0;
+    font-size:.95rem;
+    color:#6B5D58;
+}
+
+.breadcrumb a{
+    color:#C5203E;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.breadcrumb span{
+    margin:0 8px;
+}
+
+/* ---------- Related Resources ---------- */
+
+.related-resources{
+    padding:90px 20px;
+    background:#FCFAF6;
+}
+
+.related-resources h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(2.4rem,5vw,4.2rem);
+    color:#203337;
+    margin-bottom:30px;
+}
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.related-card{
+    display:block;
+    background:#fff;
+    padding:34px;
+    border-radius:28px;
+    border:1px solid rgba(32,51,55,.10);
+    box-shadow:0 20px 60px rgba(32,51,55,.08);
+    text-decoration:none;
+    color:inherit;
+    transition:.28s ease;
+}
+
+.related-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 26px 70px rgba(32,51,55,.12);
+}
+
+.related-card span{
+    font-size:2rem;
+}
+
+.related-card h3{
+    margin:18px 0 12px;
+    color:#203337;
+}
+
+.related-card p{
+    color:#6B5D58;
+    line-height:1.7;
+}
   </style>
 </head>
 
