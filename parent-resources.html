@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Parent Resources | Montessori Learning Library | Together We Grow Montessori School</title>
+  <meta name="description" content="Explore Montessori parent guides from Together We Grow Montessori School, including Montessori education, daycare comparison, activities at home, and future Montessori learning resources." />
+  <link rel="canonical" href="https://www.twgmontessori.ca/parent-resources.html" />
+  <link rel="icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body{background:#FCFAF6;}
+
+    .library-hero{
+      text-align:center;
+      padding:120px 20px 90px;
+      background:
+        radial-gradient(circle at 10% 80%, rgba(255,179,102,.28), transparent 34%),
+        radial-gradient(circle at 92% 12%, rgba(255,250,243,.95), transparent 42%),
+        linear-gradient(135deg,#FFF9F0 0%,#FFF1E2 55%,#FFE0C1 100%);
+    }
+
+    .library-hero img{
+      width:115px;
+      margin-bottom:20px;
+    }
+
+    .library-hero h1{
+      font-family:Cormorant Garamond,serif;
+      font-size:clamp(3.2rem,7vw,6.5rem);
+      line-height:1;
+      color:#203337;
+      margin-bottom:22px;
+    }
+
+    .library-hero p{
+      max-width:820px;
+      margin:0 auto 30px;
+      color:#6B5D58;
+      font-size:1.15rem;
+      line-height:1.8;
+    }
+
+    .library-section{
+      padding:90px 20px;
+    }
+
+    .library-wrap{
+      width:min(1180px,92%);
+      margin:auto;
+    }
+
+    .library-heading{
+      text-align:center;
+      max-width:820px;
+      margin:0 auto 48px;
+    }
+
+    .library-heading h2{
+      font-family:Cormorant Garamond,serif;
+      font-size:clamp(2.6rem,5vw,4.6rem);
+      line-height:1;
+      color:#203337;
+      margin-bottom:18px;
+    }
+
+    .library-heading p{
+      color:#6B5D58;
+      font-size:1.08rem;
+    }
+
+    .featured-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:28px;
+    }
+
+    .guide-card{
+      background:#fff;
+      border:1px solid rgba(32,51,55,.10);
+      border-radius:34px;
+      padding:36px;
+      box-shadow:0 24px 70px rgba(32,51,55,.08);
+      text-decoration:none;
+      color:inherit;
+      display:block;
+      transition:.28s ease;
+    }
+
+    .guide-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 30px 80px rgba(32,51,55,.12);
+    }
+
+    .guide-icon{
+      width:66px;
+      height:66px;
+      border-radius:22px;
+      background:#fff3ea;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      margin-bottom:24px;
+    }
+
+    .guide-card h3{
+      font-size:1.45rem;
+      color:#203337;
+      margin:14px 0 14px;
+    }
+
+    .guide-card p{
+      color:#6B5D58;
+      line-height:1.75;
+      margin-bottom:22px;
+    }
+
+    .guide-link{
+      display:inline-block;
+      color:#d64667;
+      font-weight:800;
+    }
+
+    .soft-bg{
+      background:#F6EBDD;
+    }
+
+    .category-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:28px;
+    }
+
+    .category-card{
+      background:#fff;
+      border:1px solid rgba(32,51,55,.10);
+      border-radius:34px;
+      padding:34px;
+      box-shadow:0 20px 60px rgba(32,51,55,.07);
+    }
+
+    .category-card h3{
+      color:#203337;
+      font-size:1.45rem;
+      margin-bottom:18px;
+    }
+
+    .resource-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+
+    .resource-list li{
+      padding:13px 0;
+      border-bottom:1px solid rgba(32,51,55,.08);
+      color:#6B5D58;
+    }
+
+    .resource-list li:last-child{
+      border-bottom:none;
+    }
+
+    .resource-list a{
+      color:#203337;
+      font-weight:800;
+      text-decoration:none;
+    }
+
+    .resource-list a:hover{
+      color:#d64667;
+    }
+
+    .coming-soon{
+      color:#A08F86;
+      font-style:italic;
+    }
+
+    .library-cta{
+      text-align:center;
+      padding:95px 20px;
+      background:
+        radial-gradient(circle at 10% 30%, rgba(255,179,102,.25), transparent 32%),
+        linear-gradient(135deg,#FFF9F0,#FFE8D3);
+    }
+
+    .library-cta h2{
+      font-family:Cormorant Garamond,serif;
+      font-size:clamp(2.8rem,6vw,5rem);
+      line-height:1;
+      margin-bottom:18px;
+      color:#203337;
+    }
+
+    .library-cta p{
+      color:#6B5D58;
+      max-width:720px;
+      margin:0 auto 28px;
+      font-size:1.08rem;
+      line-height:1.8;
+    }
+
+    @media(max-width:980px){
+      .featured-grid,
+      .category-grid{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header" id="top">
+  <a class="brand" href="index.html" aria-label="Together We Grow Montessori School home">
+    <img src="assets/twg_round_logo.png" alt="Together We Grow Montessori School logo" />
+    <span>Together We Grow</span>
+  </a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html#why">Why Us</a>
+    <a href="index.html#philosophy">Philosophy</a>
+    <a href="index.html#program">Program</a>
+    <a href="parent-resources.html">Parent Resources</a>
+    <a href="index.html#day">A Day</a>
+    <a href="index.html#founder">Founder</a>
+    <a href="index.html#tour" class="nav-cta">Book a Tour</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="library-hero">
+  <img src="assets/twg_round_logo.png" alt="Together We Grow Montessori School logo" />
+  <p class="eyebrow red">Parent Resources</p>
+  <h1>Montessori Learning Library</h1>
+  <p>
+    Thoughtful Montessori guides for families who want to understand early childhood education,
+    child development, Montessori philosophy, and how to choose the right learning environment.
+  </p>
+  <a href="#featured" class="button primary">Start Reading</a>
+</section>
+
+<section class="library-section" id="featured">
+  <div class="library-wrap">
+    <div class="library-heading">
+      <p class="eyebrow red">Featured Guides</p>
+      <h2>Start here</h2>
+      <p>
+        These core articles introduce Montessori education and help families understand
+        how Montessori supports children ages 2.5 to 5.
+      </p>
+    </div>
+
+    <div class="featured-grid">
+      <a href="about-montessori.html" class="guide-card">
+        <div class="guide-icon">📖</div>
+        <p class="eyebrow red">Montessori Guide</p>
+        <h3>What Is Montessori?</h3>
+        <p>
+          Learn how Montessori education develops independence, concentration,
+          confidence, and a lifelong love of learning.
+        </p>
+        <span class="guide-link">Read the Complete Guide →</span>
+      </a>
+
+      <a href="montessori-vs-daycare.html" class="guide-card">
+        <div class="guide-icon">🏫</div>
+        <p class="eyebrow red">Parent Comparison</p>
+        <h3>Montessori vs Traditional Daycare</h3>
+        <p>
+          Compare Montessori education with traditional daycare and understand
+          what makes the Montessori approach different.
+        </p>
+        <span class="guide-link">Compare Programs →</span>
+      </a>
+
+      <a href="montessori-activities-at-home.html" class="guide-card">
+        <div class="guide-icon">🌱</div>
+        <p class="eyebrow red">Montessori at Home</p>
+        <h3>Montessori Activities at Home</h3>
+        <p>
+          Discover simple Montessori-inspired activities families can do at home
+          using everyday household materials.
+        </p>
+        <span class="guide-link">Explore Activities →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="library-section soft-bg">
+  <div class="library-wrap">
+    <div class="library-heading">
+      <p class="eyebrow red">Knowledge Centre</p>
+      <h2>Explore by topic</h2>
+      <p>
+        Our Montessori Learning Library will continue to grow with articles about
+        Montessori history, philosophy, curriculum, home learning, and school readiness.
+      </p>
+    </div>
+
+    <div class="category-grid">
+
+      <article class="category-card">
+        <h3>Montessori Foundations</h3>
+        <ul class="resource-list">
+          <li><a href="about-montessori.html">What Is Montessori?</a></li>
+          <li><span class="coming-soon">Who Was Dr. Maria Montessori? — Coming Soon</span></li>
+          <li><span class="coming-soon">The History of Montessori Education — Coming Soon</span></li>
+          <li><span class="coming-soon">Montessori Philosophy Explained — Coming Soon</span></li>
+        </ul>
+      </article>
+
+      <article class="category-card">
+        <h3>Montessori Curriculum</h3>
+        <ul class="resource-list">
+          <li><span class="coming-soon">Practical Life Activities — Coming Soon</span></li>
+          <li><span class="coming-soon">Sensorial Education — Coming Soon</span></li>
+          <li><span class="coming-soon">Montessori Language Development — Coming Soon</span></li>
+          <li><span class="coming-soon">Montessori Mathematics — Coming Soon</span></li>
+          <li><span class="coming-soon">Grace and Courtesy — Coming Soon</span></li>
+        </ul>
+      </article>
+
+      <article class="category-card">
+        <h3>Parent Guides</h3>
+        <ul class="resource-list">
+          <li><a href="montessori-vs-daycare.html">Montessori vs Traditional Daycare</a></li>
+          <li><a href="montessori-activities-at-home.html">Montessori Activities at Home</a></li>
+          <li><span class="coming-soon">Montessori Materials for Home — Coming Soon</span></li>
+          <li><span class="coming-soon">Preparing for Montessori Preschool — Coming Soon</span></li>
+          <li><span class="coming-soon">Kindergarten Readiness — Coming Soon</span></li>
+        </ul>
+      </article>
+
+      <article class="category-card">
+        <h3>Vancouver Families</h3>
+        <ul class="resource-list">
+          <li><span class="coming-soon">Choosing a Montessori Preschool in Vancouver — Coming Soon</span></li>
+          <li><span class="coming-soon">Questions to Ask During a School Tour — Coming Soon</span></li>
+          <li><span class="coming-soon">What to Expect at a Montessori School Visit — Coming Soon</span></li>
+          <li><a href="index.html#tour">Book a School Tour</a></li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="library-cta">
+  <h2>Ready to experience Montessori?</h2>
+  <p>
+    Reading about Montessori is a meaningful first step. Visiting a prepared Montessori
+    environment helps families see how children build independence, curiosity, confidence,
+    and joy.
+  </p>
+  <a href="index.html#tour" class="button primary">Book a School Tour</a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <img src="assets/twg_round_logo.png" alt="Together We Grow logo" />
+  <p class="script">Together We Grow</p>
+
+  <p>
+    <a href="https://maps.google.com/?q=Unit+200,+604+West+Broadway,+Vancouver,+BC+V5Z+1G1" target="_blank" rel="noopener">
+      Unit 200 – 604 West Broadway, Vancouver, BC
+    </a>
+    ·
+    <a href="mailto:info@twgmontessori.ca">info@twgmontessori.ca</a>
+    ·
+    <a href="tel:+16046578289">604-657-8289</a>
+  </p>
+
+  <p>© 2026 Together We Grow Montessori School. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
