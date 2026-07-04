@@ -364,3 +364,49 @@ body{
     color:#C5203E;
     text-decoration:underline;
 }
+/* Parent Resources */
+
+.resources{
+    padding:90px 0;
+    background:#fffdf8;
+}
+
+.resource-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:45px;
+}
+
+.resource-card{
+    background:#fff;
+    padding:38px;
+    border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.resource-card:hover{
+    transform:translateY(-6px);
+}
+
+.resource-card h3{
+    margin-bottom:18px;
+}
+
+.resource-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+.resource-card a{
+    display:inline-block;
+    margin-top:18px;
+    font-weight:700;
+    color:#c94f73;
+    text-decoration:none;
+}
+
+.resource-card a:hover{
+    text-decoration:underline;
+}
