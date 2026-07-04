@@ -431,3 +431,34 @@ body{
     transform:translateY(-2px);
     text-decoration:none;
 }
+.resources .resource-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    gap:34px !important;
+    margin-top:50px !important;
+}
+
+.resources .resource-card{
+    background:#fff !important;
+    padding:42px !important;
+    border-radius:32px !important;
+    border:1px solid rgba(32,51,55,.10) !important;
+    box-shadow:0 24px 70px rgba(32,51,55,.08) !important;
+}
+
+.resources .resource-button{
+    display:inline-block !important;
+    margin-top:22px !important;
+    padding:13px 22px !important;
+    border-radius:999px !important;
+    background:#d64667 !important;
+    color:#fff !important;
+    font-weight:800 !important;
+    text-decoration:none !important;
+}
+
+@media(max-width:800px){
+    .resources .resource-grid{
+        grid-template-columns:1fr !important;
+    }
+}
