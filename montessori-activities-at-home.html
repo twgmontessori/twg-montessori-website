@@ -1,1 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Montessori Activities at Home | Together We Grow Montessori School Vancouver</title>
+  <meta name="description" content="Discover simple Montessori activities at home for children ages 2 to 5. Practical life, sensorial, language, math, and independence-building activities for preschoolers." />
+
+  <link rel="canonical" href="https://www.twgmontessori.ca/montessori-activities-at-home.html" />
+  <link rel="icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DB778C4YM1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DB778C4YM1');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "xgd54msohn");
+  </script>
+
+  <style>
+    body{background:#FCFAF6;}
+
+    .activity-hero{
+      min-height:88vh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:90px 20px;
+      background:
+        radial-gradient(circle at 10% 75%, rgba(255,179,102,.30), transparent 34%),
+        radial-gradient(circle at 92% 12%, rgba(255,250,243,.96), transparent 42%),
+        linear-gradient(135deg,#FFF9F0 0%,#FFF1E2 52%,#FFE0C1 100%);
+    }
+
+    .activity-hero img{
+      width:120px;
+      margin:0 auto 22px;
+    }
+
+    .activity-hero h1{
+      font-family:Cormorant Garamond,serif;
+      font-size:clamp(3rem,7vw,6.5rem);
+      line-height:.98;
+      color:#203337;
+      margin-bottom:22px;
+    }
+
+    .activity-hero h1 span{
+      display:block;
+      font-family:Pacifico,cursive;
+      font-size:.42em;
+      margin-top:.22em;
+    }
+
+    .activity-hero p{
+      max-width:850px;
+      margin:0 auto;
+      font-size:1.18rem;
+      color:#6B5D58;
+    }
+
+    .breadcrumb{
+      width:min(1120px,92%);
+      margin:110px auto 0;
+      font-size:.95rem;
+      color:#6B5D58;
+    }
+
+    .breadcrumb a{
+      color:#C5203E;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    .breadcrumb span{margin:0 8px;}
+
+    .activity-section{
+      padding:90px 20px;
+    }
+
+    .activity-wrap{
+      width:min(1120px,92%);
+      margin:auto;
+    }
+
+    .activity-heading{
+      text-align:center;
+      max-width:840px;
+      margin:0 auto 48px;
+    }
+
+    .activity-heading h2{
+      font-family:Cormorant Garamond,serif;
+      font-size:clamp(2.5rem,5vw,4.6rem);
+      line-height:1;
+      color:#203337;
+      margin-bottom:18px;
+    }
+
+    .activity-heading p{
+      color:#6B5D58;
+      font-size:1.08rem;
+    }
+
+    .soft-bg{background:#F6EBDD;}
+
+    .intro-box{
+      background:#fff;
+      border:1px solid rgba(32,51,55,.12);
+      border-radius:38px;
+      padding:48px;
+      box-shadow:0 24px 70px rgba(32,51,55,.08);
+    }
+
+    .intro-box p{
+      color:#6B5D58;
+      font-size:1.08rem;
+      margin-bottom:20px;
+    }
+
+    .age-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:28px;
+    }
+
+    .age-card{
+      background:#fff;
+      border:1px solid rgba(32,51,55,.12);
+      border-radius:34px;
+      padding:34px;
+      box-shadow:0 24px 70px rgba(32,51,55,.08);
+    }
+
+    .age-card .icon{
+      width:64px;
+      height:64px;
+      border-radius:22px;
+      background:#fff3ea;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      margin-bottom:22px;
+    }
+
+    .age-card h3{
+      color:#203337;
+      font-size:1.5rem;
+      margin-bottom:18px;
+    }
+
+    .age-card ul{
+      color:#6B5D58;
+      line-height:2;
+      padding-left:20px;
+    }
+
+    .activity-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:28px;
+    }
+
+    .activity-card{
+      background:#fff;
+      border:1px solid rgba(32,51,55,.12);
+      border-radius:30px;
+      padding:32px;
+      box-shadow:0 20px 60px rgba(32,51,55,.08);
+    }
+
+    .activity-card span{
+      font-size:2rem;
+    }
+
+    .activity-card h3{
+      color:#203337;
+      margin:16px 0 10px;
+    }
+
+    .activity-card p{
+      color:#6B5D58;
+      line-height:1.75;
+    }
+
+    .tips-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:18px;
+    }
+
+    .tip-card{
+      background:#fff;
+      border-radius:28px;
+      padding:26px;
+      border:1px solid rgba(32,51,55,.10);
+      box-shadow:0 16px 44px rgba(32,51,55,.06);
+    }
+
+    .tip-card h3{
+      color:#C5203E;
+      font-size:1rem;
+      margin-bottom:10px;
+    }
+
+    .tip-card p{
+      color:#6B5D58;
+      font-size:.95rem;
+      line-height:1.65;
+    }
+
+    .faq-item{
+      background:#fff;
+      border:1px solid rgba(32,51,55,.12);
+      border-radius:24px;
+      padding:26px 30px;
+      margin-bottom:16px;
+      box-shadow:0 14px 40px rgba(32,51,55,.06);
+    }
+
+    .faq-item h3{
+      color:#203337;
+      margin-bottom:10px;
+    }
+
+    .faq-item p{
+      color:#6B5D58;
+      margin-bottom:0;
+    }
+
+    .related-resources{
+      padding:90px 20px;
+      background:#FCFAF6;
+    }
+
+    .related-resources h2{
+      font-family:Cormorant Garamond,serif;
+      font-size:clamp(2.4rem,5vw,4.2rem);
+      color:#203337;
+      margin-bottom:30px;
+    }
+
+    .related-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .related-card{
+      display:block;
+      background:#fff;
+      padding:34px;
+      border-radius:28px;
+      border:1px solid rgba(32,51,55,.10);
+      box-shadow:0 20px 60px rgba(32,51,55,.08);
+      text-decoration:none;
+      color:inherit;
+      transition:.28s ease;
+      cursor:pointer;
+    }
+
+    .related-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 26px 70px rgba(32,51,55,.12);
+    }
+
+    .related-card:hover h3{color:#d64667;}
+
+    .related-card span{font-size:2rem;}
+
+    .related-card h3{
+      margin:18px 0 12px;
+      color:#203337;
+    }
+
+    .related-card p{
+      color:#6B5D58;
+      line-height:1.7;
+    }
+
+    .activity-cta{
+      text-align:center;
+      padding:95px 20px;
+      background:
+        radial-gradient(circle at 10% 30%, rgba(255,179,102,.25), transparent 32%),
+        linear-gradient(135deg,#FFF9F0,#FFE8D3);
+    }
+
+    .activity-cta h2{
+      font-family:Cormorant Garamond,serif;
+      font-size:clamp(2.8rem,6vw,5rem);
+      line-height:1;
+      margin-bottom:18px;
+    }
+
+    .activity-cta p{
+      color:#6B5D58;
+      max-width:720px;
+      margin:0 auto 28px;
+      font-size:1.08rem;
+    }
+
+    @media(max-width:950px){
+      .age-grid,
+      .activity-grid,
+      .tips-grid{
+        grid-template-columns:1fr;
+      }
+
+      .intro-box{padding:32px;}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What are Montessori activities at home?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Montessori activities at home are simple, hands-on experiences that help children build independence, concentration, coordination, confidence, and practical life skills using everyday household materials."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What Montessori activities are good for preschoolers?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Good Montessori activities for preschoolers include pouring water, washing fruit, folding towels, sorting objects, matching socks, preparing snacks, watering plants, counting objects, and practicing buttons or zippers."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do I need special Montessori materials at home?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. Many effective Montessori activities use simple household items such as cups, bowls, spoons, towels, fruit, plants, baskets, and child-sized tools."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What age are Montessori home activities suitable for?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Montessori-inspired home activities can begin around age 2 and continue through the preschool years. Activities should be simple, safe, and matched to the child's stage of development."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<header class="site-header" id="top">
+  <a class="brand" href="index.html" aria-label="Together We Grow Montessori School home">
+    <img src="assets/twg_round_logo.png" alt="Together We Grow Montessori School logo" />
+    <span>Together We Grow</span>
+  </a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html#why">Why Us</a>
+    <a href="index.html#philosophy">Philosophy</a>
+    <a href="index.html#program">Program</a>
+    <a href="index.html#day">A Day</a>
+    <a href="about-montessori.html">Montessori</a>
+    <a href="index.html#tour" class="nav-cta">Book a Tour</a>
+  </nav>
+</header>
+
+<main>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span>›</span>
+  <span>Montessori Activities at Home</span>
+</nav>
+
+<section class="activity-hero">
+  <div>
+    <img src="assets/twg_round_logo.png" alt="Together We Grow Montessori School logo" />
+    <p class="eyebrow">Montessori Parent Guide</p>
+    <h1>Montessori Activities at Home<span>Simple Ideas for Ages 2–5</span></h1>
+    <p>
+      Montessori activities at home do not need to be complicated or expensive.
+      Everyday tasks such as pouring, sorting, washing, matching, and caring for the home
+      can help children build independence, concentration, coordination, and confidence.
+    </p>
+  </div>
+</section>
+
+<section class="activity-section soft-bg">
+  <div class="activity-wrap intro-box">
+    <div class="activity-heading">
+      <p class="eyebrow red">Montessori at Home</p>
+      <h2>What are Montessori activities?</h2>
+    </div>
+
+    <p>
+      Montessori activities are meaningful, hands-on experiences that help children learn by doing.
+      Instead of focusing on entertainment or passive instruction, Montessori invites children to
+      participate in real work, make choices, repeat tasks, and build confidence through practice.
+    </p>
+
+    <p>
+      At home, Montessori does not require expensive materials. Many of the most valuable activities
+      use simple household objects: cups, spoons, towels, baskets, fruit, water, plants, paper,
+      child-sized tools, and everyday routines.
+    </p>
+
+    <p>
+      The goal is not perfection. The goal is to give children real opportunities to participate,
+      concentrate, solve problems, and feel the joy of saying, “I can do it myself.”
+    </p>
+  </div>
+</section>
+
+<section class="activity-section">
+  <div class="activity-wrap">
+    <div class="activity-heading">
+      <p class="eyebrow red">Activities by Age</p>
+      <h2>Simple Montessori ideas for ages 2–5.</h2>
+      <p>
+        Choose activities that match your child's readiness. Keep materials simple,
+        demonstrate slowly, and allow your child time to practice.
+      </p>
+    </div>
+
+    <div class="age-grid">
+      <article class="age-card">
+        <div class="icon">🧺</div>
+        <h3>Ages 2–3</h3>
+        <ul>
+          <li>Pour water between two small cups</li>
+          <li>Wash fruit in a small bowl</li>
+          <li>Fold washcloths or small towels</li>
+          <li>Match socks from the laundry</li>
+          <li>Carry a tray carefully from one place to another</li>
+        </ul>
+      </article>
+
+      <article class="age-card">
+        <div class="icon">🌱</div>
+        <h3>Ages 3–4</h3>
+        <ul>
+          <li>Prepare simple snacks</li>
+          <li>Sort buttons, shells, or blocks by colour</li>
+          <li>Water a plant with a small watering can</li>
+          <li>Wipe a table with a cloth</li>
+          <li>Practice simple cutting with child-safe scissors</li>
+        </ul>
+      </article>
+
+      <article class="age-card">
+        <div class="icon">🔢</div>
+        <h3>Ages 4–5</h3>
+        <ul>
+          <li>Button and zip clothing independently</li>
+          <li>Help measure ingredients for baking</li>
+          <li>Count fruits, spoons, blocks, or household objects</li>
+          <li>Create a simple shopping list with drawings or letters</li>
+          <li>Set the table for family meals</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="activity-section soft-bg">
+  <div class="activity-wrap">
+    <div class="activity-heading">
+      <p class="eyebrow red">Ten Activities</p>
+      <h2>Montessori activities you can try today.</h2>
+    </div>
+
+    <div class="activity-grid">
+      <article class="activity-card">
+        <span>💧</span>
+        <h3>1. Water Pouring</h3>
+        <p>Give your child two small pitchers or cups and a tray. Pouring develops coordination, concentration, control of movement, and independence.</p>
+      </article>
+
+      <article class="activity-card">
+        <span>🍎</span>
+        <h3>2. Washing Fruit</h3>
+        <p>Children can wash apples, berries, or vegetables in a small bowl. This builds care, responsibility, and practical life skills.</p>
+      </article>
+
+      <article class="activity-card">
+        <span>🧦</span>
+        <h3>3. Matching Socks</h3>
+        <p>Ask your child to match socks by colour, size, or pattern. This supports visual discrimination, order, and problem-solving.</p>
+      </article>
+
+      <article class="activity-card">
+        <span>🧽</span>
+        <h3>4. Wiping a Table</h3>
+        <p>Provide a small cloth and show how to wipe slowly from left to right. Children love caring for their environment.</p>
+      </article>
+
+      <article class="activity-card">
+        <span>🌿</span>
+        <h3>5. Watering Plants</h3>
+        <p>Plant care teaches responsibility, gentleness, patience, and respect for living things.</p>
+      </article>
+
+      <article class="activity-card">
+        <span>🎨</span>
+        <h3>6. Colour Sorting</h3>
+        <p>Use buttons, blocks, pom-poms, or natural objects. Sorting helps children classify and organize what they see.</p>
+      </article>
+
+      <article class="activity-card">
+        <span>📚</span>
+        <h3>7. Sound Games</h3>
+        <p>Ask, “What sound do you hear at the beginning of sun?” Sound games gently support early language development.</p>
+      </article>
+
+      <article class="activity-card">
+        <span>🥄</span>
+        <h3>8. Snack Preparation</h3>
+        <p>Children can spread, peel, wash, arrange, or serve simple snacks. Food preparation supports independence and confidence.</p>
+      </article>
+
+      <article class="activity-card">
+        <span>🔢</span>
+        <h3>9. Counting Everyday Objects</h3>
+        <p>Count spoons, apples, blocks, shoes, or stairs. Math begins with real objects children can touch and move.</p>
+      </article>
+
+      <article class="activity-card">
+        <span>👕</span>
+        <h3>10. Dressing Practice</h3>
+        <p>Buttons, zippers, socks, and jackets help children strengthen fine motor skills and self-care independence.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="activity-section">
+  <div class="activity-wrap">
+    <div class="activity-heading">
+      <p class="eyebrow red">Parent Tips</p>
+      <h2>Five Montessori principles for home.</h2>
+    </div>
+
+    <div class="tips-grid">
+      <article class="tip-card">
+        <h3>Follow Your Child</h3>
+        <p>Notice what your child is drawn to and offer activities that match their interests.</p>
+      </article>
+
+      <article class="tip-card">
+        <h3>Keep It Simple</h3>
+        <p>One clear activity with a few materials is usually better than too many choices.</p>
+      </article>
+
+      <article class="tip-card">
+        <h3>Slow Down</h3>
+        <p>Demonstrate slowly and allow your child time to repeat the activity.</p>
+      </article>
+
+      <article class="tip-card">
+        <h3>Encourage Independence</h3>
+        <p>Let children try safe tasks by themselves, even if the result is not perfect.</p>
+      </article>
+
+      <article class="tip-card">
+        <h3>Enjoy the Process</h3>
+        <p>Montessori values concentration, effort, and growth more than a perfect result.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="activity-section soft-bg">
+  <div class="activity-wrap">
+    <div class="activity-heading">
+      <p class="eyebrow red">Parent Questions</p>
+      <h2>Frequently asked questions.</h2>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I need to buy Montessori materials?</h3>
+      <p>No. Many Montessori-inspired activities can be done with simple items already in your home.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How long should a Montessori activity last?</h3>
+      <p>Follow your child. Some children may engage for a few minutes, while others may repeat an activity for much longer.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Should I correct my child immediately?</h3>
+      <p>Not always. Montessori encourages observation, gentle guidance, and allowing children to discover through practice.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Are Montessori activities good for kindergarten readiness?</h3>
+      <p>Yes. They support independence, concentration, language, math readiness, fine motor skills, and confidence.</p>
+    </div>
+  </div>
+</section>
+
+<section class="related-resources">
+  <div class="activity-wrap">
+    <p class="eyebrow red">Related Resources</p>
+    <h2>Continue Learning</h2>
+
+    <div class="related-grid">
+      <a href="about-montessori.html" class="related-card">
+        <span>📖</span>
+        <h3>What Is Montessori?</h3>
+        <p>Learn the Montessori philosophy and how it supports independence and lifelong learning.</p>
+      </a>
+
+      <a href="montessori-vs-daycare.html" class="related-card">
+        <span>🏫</span>
+        <h3>Montessori vs Traditional Daycare</h3>
+        <p>Compare Montessori education with traditional daycare and preschool options.</p>
+      </a>
+
+      <a href="index.html#tour" class="related-card">
+        <span>🌱</span>
+        <h3>Book a School Tour</h3>
+        <p>Experience our Montessori environment and connect with our admissions team.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="activity-cta">
+  <h2>Bring Montessori learning to life.</h2>
+  <p>
+    Home activities are a beautiful beginning. A prepared Montessori classroom offers children
+    even more opportunities to grow with independence, curiosity, confidence, and joy.
+  </p>
+  <a href="index.html#tour" class="button primary">Book a School Tour</a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <img src="assets/twg_round_logo.png" alt="Together We Grow logo" />
+  <p class="script">Together We Grow</p>
+
+  <p>
+    <a href="https://maps.google.com/?q=Unit+200,+604+West+Broadway,+Vancouver,+BC+V5Z+1G1" target="_blank" rel="noopener">
+      Unit 200 – 604 West Broadway, Vancouver, BC
+    </a>
+    ·
+    <a href="mailto:info@twgmontessori.ca">info@twgmontessori.ca</a>
+    ·
+    <a href="tel:+16046578289">604-657-8289</a>
+  </p>
+
+  <p>© 2026 Together We Grow Montessori School. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
