@@ -107,8 +107,16 @@ href="https://www.twgmontessori.ca/sensorial-education.html" />
     }
 
     .learn-card span {
-      font-size: 2rem;
-    }
+  display: inline-block;
+}
+    .material-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 4px;
+  vertical-align: middle;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
+}
 
     .learn-card h3 {
       margin: 14px 0 10px;
@@ -527,17 +535,28 @@ href="https://www.twgmontessori.ca/sensorial-education.html" />
 
     <div class="areas-grid">
 
-      <article class="learn-card">
-        <span>🩷</span>
-        <h3>Pink Tower</h3>
-        <p>
-          Children explore size and dimension by building a tower from the largest
-          cube to the smallest, strengthening visual discrimination and coordination.
-        </p>
-      </article>
+    <article class="learn-card">
+
+  <span
+    class="material-icon"
+    style="background:#E66FA2;">
+  </span>
+
+  <h3>Pink Tower</h3>
+
+  <p>
+    Children explore size and dimension by building a tower from the largest
+    cube to the smallest, strengthening visual discrimination and coordination.
+  </p>
+
+</article>
+      
 
       <article class="learn-card">
-        <span>🟫</span>
+       <span
+  class="material-icon"
+  style="background:#8B5A3C;width:28px;height:18px;">
+</span>
         <h3>Brown Stair</h3>
         <p>
           Children compare thickness and width while arranging prisms in sequence,
@@ -546,7 +565,10 @@ href="https://www.twgmontessori.ca/sensorial-education.html" />
       </article>
 
       <article class="learn-card">
-        <span>🟥</span>
+        <span
+  class="material-icon"
+  style="background:#C5203E;width:36px;height:8px;border-radius:3px;">
+</span>
         <h3>Red Rods</h3>
         <p>
           By arranging rods from shortest to longest, children develop an
@@ -555,7 +577,11 @@ href="https://www.twgmontessori.ca/sensorial-education.html" />
       </article>
 
       <article class="learn-card">
-        <span>🎨</span>
+       <span style="display:inline-flex;gap:4px;align-items:center;">
+  <span class="material-icon" style="background:#E74C3C;width:12px;height:24px;"></span>
+  <span class="material-icon" style="background:#F1C40F;width:12px;height:24px;"></span>
+  <span class="material-icon" style="background:#3498DB;width:12px;height:24px;"></span>
+</span>
         <h3>Colour Tablets</h3>
         <p>
           Children match, sort, and grade colours while refining visual perception,
