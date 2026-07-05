@@ -106,33 +106,29 @@ href="https://www.twgmontessori.ca/montessori-language-development.html" />
       box-shadow: 0 24px 70px rgba(32,51,55,.08);
     }
 
-    .material-photo{
-    width:100%;
-    height:240px;          /* every card gets the same image height */
-    object-fit:contain;    /* show the whole material */
-    object-position:center center;
-    background:#fff;
-    border-radius:20px;
-    padding:12px;
-    display:block;
-    margin-bottom:24px;
-}
-
     .material-frame{
-    height:240px;
-    background:#fff;
-    border-radius:22px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:24px;
-    overflow:hidden;
+  height:320px;
+  background:#fff;
+  border-radius:26px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  margin-bottom:28px;
+  box-shadow:inset 0 0 0 1px rgba(32,51,55,.06);
 }
 
-.material-frame img{
-    max-width:100%;
-    max-height:100%;
-    object-fit:contain;
+.material-photo{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  padding:20px;
+  display:block;
+}
+
+.material-showcase .learn-card{
+  padding:28px;
 }
 
     .material-title{
@@ -588,12 +584,12 @@ href="https://www.twgmontessori.ca/montessori-language-development.html" />
       memorization.
     </p>
 
-    <div class="areas-grid">
+  <div class="areas-grid material-showcase">
 
   <article class="learn-card">
    <div class="material-frame">
-    <img src="assets/sandpaper%20letter.jpeg" alt="Montessori sandpaper letters material" class="material-photo" />
-
+  <img src="assets/sandpaper%20letter.jpeg" alt="Montessori sandpaper letters material" class="material-photo" />
+</div>
     <div class="material-title">
       <span class="material-icon" style="background:#D9C2A3;"></span>
       <h3>Sandpaper Letters</h3>
@@ -612,8 +608,9 @@ href="https://www.twgmontessori.ca/montessori-language-development.html" />
   </article>
 
   <article class="learn-card">
-    <img src="assets/movable%20alphabet.jpeg" alt="Montessori moveable alphabet material" class="material-photo" />
-
+    <div class="material-frame">
+  <img src="assets/movable%20alphabet.jpeg" alt="Montessori moveable alphabet material" class="material-photo" />
+</div>
     <div class="material-title">
       <span class="material-icon" style="background:#C5203E;width:28px;height:18px;"></span>
       <h3>Moveable Alphabet</h3>
@@ -632,8 +629,9 @@ href="https://www.twgmontessori.ca/montessori-language-development.html" />
   </article>
 
   <article class="learn-card">
-    <img src="assets/object%20box.jpeg" alt="Montessori language object boxes material" class="material-photo" />
-
+    <div class="material-frame">
+  <img src="assets/object%20box.jpeg" alt="Montessori language object boxes material" class="material-photo" />
+</div>
     <div class="material-title">
       <span class="material-icon" style="background:#6FAE7A;"></span>
       <h3>Object Boxes</h3>
@@ -652,7 +650,9 @@ href="https://www.twgmontessori.ca/montessori-language-development.html" />
   </article>
 
   <article class="learn-card">
- <img src="assets/metal%20inset.jpeg" alt="Montessori metal insets material" class="material-photo" />
+    <div class="material-frame">
+  <img src="assets/metal%20inset.jpeg" alt="Montessori metal insets material" class="material-photo" />
+</div>
   <div class="material-title">
     <span class="material-icon" style="background:#4A90E2;"></span>
     <h3>Metal Insets</h3>
