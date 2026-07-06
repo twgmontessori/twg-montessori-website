@@ -105,7 +105,60 @@ href="https://www.twgmontessori.ca/practical-life-activities.html" />
       padding: 30px;
       box-shadow: 0 24px 70px rgba(32,51,55,.08);
     }
+.material-frame{
+  height:340px;
+  border-radius:26px;
+  overflow:hidden;
+  margin-bottom:28px;
+  background:#fff;
+}
 
+.material-photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+.material-showcase .learn-card{
+  padding:28px;
+}
+    .material-title{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:14px;
+}
+
+.material-title h3{
+    margin:0;
+}
+
+.material-icon{
+    width:24px;
+    height:24px;
+    border-radius:4px;
+    display:inline-block;
+    flex-shrink:0;
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);
+}
+
+.skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:22px;
+}
+
+.skill-tags span{
+    padding:8px 14px;
+    border-radius:999px;
+    background:#F6EBDD;
+    color:#203337;
+    font-size:.88rem;
+    font-weight:600;
+}
     .learn-card span {
       font-size: 2rem;
     }
@@ -513,38 +566,95 @@ href="https://www.twgmontessori.ca/practical-life-activities.html" />
       Montessori Practical Life activities are carefully organized into four main areas. Together, they help children become more independent while developing physical coordination, concentration, responsibility, and confidence.
     </p>
 
-    <div class="areas-grid">
+   <div class="areas-grid material-showcase">
 
       <article class="learn-card">
-        <span>👤</span>
-        <h3>Care of Self</h3>
-        <p>
-          Children learn everyday self-care skills such as dressing, hand washing, buttoning, zipping, tying, and preparing simple snacks. These activities encourage independence and self-confidence.
-        </p>
+        <div class="material-frame">
+  <img src="assets/care-of-self.jpg"
+       alt="Montessori spooning activity for care of self"
+       class="material-photo" />
+</div>
+        <div class="material-title">
+    <span class="material-icon"
+          style="background:#D9C2A3;"></span>
+
+    <h3>Care of Self</h3>
+</div>
+       <p>
+  Children learn everyday self-care skills such as dressing, hand washing, buttoning, zipping, tying, and preparing simple snacks. These activities encourage independence and self-confidence.
+</p>
+
+<div class="skill-tags">
+  <span>👤 Independence</span>
+  <span>🧥 Self-care</span>
+  <span>💪 Confidence</span>
+</div>
       </article>
 
       <article class="learn-card">
-        <span>🏡</span>
-        <h3>Care of the Environment</h3>
+        <div class="material-frame">
+  <img src="assets/care-environment.jpg"
+       alt="Montessori watering flowers activity for care of the environment"
+       class="material-photo" />
+</div>
+        <div class="material-title">
+    <span class="material-icon"
+          style="background:#6FAE7A;"></span>
+
+    <h3>Care of the Environment</h3>
+</div>
         <p>
           Children sweep floors, wash tables, water plants, polish objects, organize shelves, and care for classroom materials. They learn responsibility while helping maintain their learning environment.
         </p>
+        <div class="skill-tags">
+    <span>🌱 Responsibility</span>
+    <span>🏡 Respect</span>
+    <span>🤝 Community</span>
+</div>
       </article>
 
       <article class="learn-card">
-        <span>🤲</span>
-        <h3>Control of Movement</h3>
+        <div class="material-frame">
+  <img src="assets/control-of-movement.jpg"
+       alt="Montessori pouring activity for control of movement"
+       class="material-photo" />
+</div>
+        <div class="material-title">
+    <span class="material-icon"
+          style="background:#4A90E2;"></span>
+
+    <h3>Control of Movement</h3>
+</div>
         <p>
           Carrying trays, pouring liquids, using tongs, spooning, transferring objects, and walking carefully all strengthen coordination, balance, precision, and body awareness.
         </p>
+        <div class="skill-tags">
+    <span>🤲 Coordination</span>
+    <span>⚖️ Balance</span>
+    <span>🎯 Precision</span>
+</div>
       </article>
 
       <article class="learn-card">
-        <span>🤝</span>
-        <h3>Grace and Courtesy</h3>
+        <div class="material-frame">
+  <img src="assets/grace-courtesy.jpg"
+       alt="Montessori grace and courtesy activity"
+       class="material-photo" />
+</div>
+        <div class="material-title">
+    <span class="material-icon"
+          style="background:#C5203E;"></span>
+
+    <h3>Grace and Courtesy</h3>
+</div>
         <p>
           Children practice greeting others, taking turns, offering help, speaking politely, and resolving small conflicts respectfully. These lessons help build empathy and positive relationships.
         </p>
+        <div class="skill-tags">
+    <span>❤️ Kindness</span>
+    <span>🤝 Respect</span>
+    <span>💬 Communication</span>
+</div>
       </article>
 
     </div>
