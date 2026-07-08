@@ -91,7 +91,10 @@
       text-decoration:none;
       color:inherit;
       display:block;
-      transition:.28s ease;
+      transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    opacity .25s ease;
     }
 
     .guide-card:hover{
@@ -207,13 +210,104 @@
       font-size:1.08rem;
       line-height:1.8;
     }
+.library-stats{
+    margin-top:-30px;
+    padding:0 20px 40px;
+}
 
+.library-stats-wrap{
+    width:min(1000px,92%);
+    margin:auto;
+    background:#fff;
+    border-radius:30px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    box-shadow:0 20px 60px rgba(32,51,55,.08);
+    overflow:hidden;
+}
+
+.library-stat{
+    padding:36px;
+    text-align:center;
+}
+
+.library-stat:not(:last-child){
+    border-right:1px solid rgba(32,51,55,.08);
+}
+
+.library-stat strong{
+    display:block;
+    font-family:Cormorant Garamond,serif;
+    font-size:2.6rem;
+    color:#D64667;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.library-stat span{
+    display:block;
+    color:#203337;
+    font-weight:700;
+    letter-spacing:.02em;
+}
+.library-stats-note{
+    margin-top:28px;
+    text-align:center;
+    color:#6B5D58;
+    font-size:.98rem;
+    max-width:720px;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:1.7;
+}
+@media(max-width:900px){
+
+.library-stats-wrap{
+    grid-template-columns:1fr;
+}
+
+.library-stat:not(:last-child){
+    border-right:none;
+    border-bottom:1px solid rgba(32,51,55,.08);
+}
+
+}
     @media(max-width:980px){
       .featured-grid,
       .category-grid{
         grid-template-columns:1fr;
       }
     }
+    .guide-filters{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:0 auto 40px;
+}
+
+.filter-btn{
+  padding:12px 22px;
+  border-radius:999px;
+  border:1px solid rgba(32,51,55,.12);
+  background:#fff;
+  color:#203337;
+  font-family:Manrope,sans-serif;
+  font-weight:700;
+  cursor:pointer;
+  transition:.25s ease;
+  box-shadow:0 8px 24px rgba(32,51,55,.05);
+}
+
+.filter-btn:hover{
+  background:#F6EBDD;
+}
+
+.filter-btn.active{
+  background:#d64667;
+  color:#fff;
+  border-color:#d64667;
+}
   </style>
 </head>
 
@@ -248,20 +342,51 @@
   </p>
   <a href="#featured" class="button primary">Start Reading</a>
 </section>
+  
+<section class="library-stats">
+  <div class="library-stats-wrap">
 
+    <div class="library-stat">
+      <strong>12+</strong>
+      <span>Montessori Guides</span>
+    </div>
+
+    <div class="library-stat">
+      <strong>6</strong>
+      <span>Curriculum Areas</span>
+    </div>
+
+    <div class="library-stat">
+    <strong>Designed</strong>
+    <span>for Families</span>
+</div>
+
+  </div>
+   
+</section>
+  
 <section class="library-section" id="featured">
   <div class="library-wrap">
     <div class="library-heading">
       <p class="eyebrow red">Featured Guides</p>
-      <h2>Start here</h2>
+      <h2>Explore Our Montessori Guides</h2>
       <p>
-        These core articles introduce Montessori education and help families understand
-        how Montessori supports children ages 2.5 to 5.
-      </p>
+  Explore our growing library of Montessori articles covering philosophy,
+  curriculum, child development, and practical guidance for families.
+  Whether you're new to Montessori or looking to deepen your understanding,
+  these resources are designed to support your journey.
+</p>
     </div>
 
+    <div class="guide-filters" aria-label="Guide filters">
+  <button class="filter-btn active" type="button" data-filter="all">All Guides</button>
+  <button class="filter-btn" type="button" data-filter="foundation">Montessori Foundations</button>
+  <button class="filter-btn" type="button" data-filter="curriculum">Curriculum</button>
+  <button class="filter-btn" type="button" data-filter="parent">Parent Guides</button>
+</div>
+    
     <div class="featured-grid">
-      <a href="about-montessori.html" class="guide-card">
+      <a href="about-montessori.html" class="guide-card" data-category="foundation">
         <div class="guide-icon">📖</div>
         <p class="eyebrow red">Montessori Guide</p>
         <h3>What Is Montessori?</h3>
@@ -272,7 +397,7 @@
         <span class="guide-link">Read the Complete Guide →</span>
       </a>
       
-  <a href="history-of-montessori-education.html" class="guide-card">
+  <a href="history-of-montessori-education.html" class="guide-card" data-category="foundation">
   <div class="guide-icon">📜</div>
 
   <p class="eyebrow red">Montessori History</p>
@@ -288,7 +413,7 @@
   </span>
 </a>
 
-  <a href="dr-maria-montessori.html" class="guide-card">
+  <a href="dr-maria-montessori.html" class="guide-card" data-category="foundation">
   <div class="guide-icon">👩‍⚕️</div>
   <p class="eyebrow red">Montessori History</p>
   <h3>Who Was Dr. Maria Montessori?</h3>
@@ -299,7 +424,7 @@
   <span class="guide-link">Learn About Dr. Montessori →</span>
 </a>
       
- <a href="montessori-philosophy.html" class="guide-card">
+ <a href="montessori-philosophy.html" class="guide-card" data-category="foundation">
   <div class="guide-icon">💡</div>
 
   <p class="eyebrow red">Montessori Philosophy</p>
@@ -316,7 +441,7 @@
   </span>
 </a>   
 
-    <a href="montessori-materials.html" class="guide-card">
+    <a href="montessori-materials.html" class="guide-card" data-category="foundation">
   <div class="guide-icon">🧩</div>
   <p class="eyebrow red">Montessori Materials</p>
   <h3>Montessori Materials Explained</h3>
@@ -327,7 +452,7 @@
   <span class="guide-link">Explore Montessori Materials →</span>
 </a>
       
-  <a href="grace-and-courtesy.html" class="guide-card">
+  <a href="grace-and-courtesy.html" class="guide-card" data-category="curriculum">
   <div class="guide-icon">🤝</div>
 
   <p class="eyebrow red">Montessori Curriculum</p>
@@ -344,7 +469,7 @@
   </span>
 </a>
 
- <a href="practical-life-activities.html" class="guide-card">
+ <a href="practical-life-activities.html" class="guide-card" data-category="curriculum">
   <div class="guide-icon">🧺</div>
 
   <p class="eyebrow red">Montessori Curriculum</p>
@@ -361,7 +486,7 @@
   </span>
 </a>
       
- <a href="sensorial-education.html" class="guide-card">
+ <a href="sensorial-education.html" class="guide-card" data-category="curriculum">
   <div class="guide-icon">👁️</div>
   <p class="eyebrow red">Montessori Curriculum</p>
   <h3>Sensorial Education</h3>
@@ -372,7 +497,7 @@
   <span class="guide-link">Explore Sensorial Education →</span>
 </a>
 
-  <a href="montessori-language-development.html" class="guide-card">
+  <a href="montessori-language-development.html" class="guide-card" data-category="curriculum">
   <div class="guide-icon">🔤</div>
   <p class="eyebrow red">Montessori Curriculum</p>
   <h3>Montessori Language Development</h3>
@@ -383,7 +508,7 @@
   <span class="guide-link">Explore Language Development →</span>
 </a>
 
-  <a href="montessori-mathematics.html" class="guide-card">
+  <a href="montessori-mathematics.html" class="guide-card" data-category="curriculum">
   <div class="guide-icon">➗</div>
   <p class="eyebrow red">Montessori Curriculum</p>
   <h3>Montessori Mathematics</h3>
@@ -393,8 +518,25 @@
   </p>
   <span class="guide-link">Explore Mathematics →</span>
 </a>
-      
-      <a href="montessori-vs-daycare.html" class="guide-card">
+
+<a href="montessori-cultural-studies.html" class="guide-card" data-category="curriculum">
+  <div class="guide-icon">🌍</div>
+
+  <p class="eyebrow red">Montessori Curriculum</p>
+
+  <h3>Montessori Cultural Studies</h3>
+
+  <p>
+    Discover how geography, science, botany, zoology, history, art, music,
+    and cultural exploration help children understand the world around them.
+  </p>
+
+  <span class="guide-link">
+    Explore Cultural Studies →
+  </span>
+</a>
+  
+      <a href="montessori-vs-daycare.html" class="guide-card" data-category="parent">
         <div class="guide-icon">🏫</div>
         <p class="eyebrow red">Parent Comparison</p>
         <h3>Montessori vs Traditional Daycare</h3>
@@ -405,7 +547,7 @@
         <span class="guide-link">Compare Programs →</span>
       </a>
 
-      <a href="montessori-activities-at-home.html" class="guide-card">
+      <a href="montessori-activities-at-home.html" class="guide-card" data-category="parent">
         <div class="guide-icon">🌱</div>
         <p class="eyebrow red">Montessori at Home</p>
         <h3>Montessori Activities at Home</h3>
@@ -453,7 +595,7 @@
          <li><a href="sensorial-education.html">Sensorial Education</a></li>
          <li><a href="montessori-language-development.html">Montessori Language Development</a></li>
 <li><a href="montessori-mathematics.html">Montessori Mathematics</a></li>
-<li><span class="coming-soon">Cultural Studies — Coming Soon</span></li>
+<li><a href="montessori-cultural-studies.html">Montessori Cultural Studies</a></li>
         </ul>
       </article>
 
@@ -543,6 +685,38 @@
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".guide-card");
+
+  buttons.forEach(function(button){
+
+    button.addEventListener("click", function(){
+
+      buttons.forEach(btn=>btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const filter = button.dataset.filter;
+
+      cards.forEach(function(card){
+
+        if(filter==="all" || card.dataset.category===filter){
+          card.style.display="block";
+        }else{
+          card.style.display="none";
+        }
+
+      });
+
+    });
+
+  });
+
+});
+</script>
 
 </body>
 </html>
