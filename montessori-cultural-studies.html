@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Montessori Cultural Studies | Geography, Science & Nature | TWG Montessori Vancouver</title>
+ <meta
+  name="description"
+  content="Explore Montessori Cultural Studies, including geography, physical science, weather, seasons, botany, zoology, art, music, history, and respect for the wider world."
+>
+  <link rel="canonical" href="https://www.twgmontessori.ca/montessori-cultural-studies.html" />
+  <link rel="icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body {
+      background: #FCFAF6;
+    }
+
+    .learn-hero {
+      min-height: 86vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 90px 20px;
+      background:
+        linear-gradient(120deg, transparent 0 76%, rgba(216,66,94,.055) 76% 100%),
+        radial-gradient(circle at 6% 78%, rgba(255,179,102,.28), transparent 34%),
+        radial-gradient(circle at 94% 14%, rgba(255,250,243,.96), transparent 42%),
+        linear-gradient(135deg,#FFF9F0 0%,#FFF3E3 48%,#FFE0C1 100%);
+    }
+
+    .learn-hero img {
+      width: 120px;
+      margin: 0 auto 22px;
+    }
+
+    .learn-hero h1 {
+      font-family: Cormorant Garamond, serif;
+      font-size: clamp(3.2rem, 8vw, 7rem);
+      line-height: .95;
+      margin-bottom: 18px;
+      color: #203337;
+    }
+
+    .learn-hero h1 span {
+      display: block;
+      font-family: Pacifico, cursive;
+      font-size: .45em;
+      margin-top: .18em;
+      color: #203337;
+    }
+
+    .learn-hero p {
+      max-width: 820px;
+      margin: 0 auto;
+      font-size: 1.18rem;
+      color: #6B5D58;
+    }
+
+    .learn-section {
+      padding: 90px 20px;
+    }
+
+    .learn-wrap {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    .learn-heading {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 46px;
+    }
+
+    .learn-heading h2 {
+      font-family: Cormorant Garamond, serif;
+      font-size: clamp(2.5rem, 5vw, 4.6rem);
+      line-height: 1;
+      margin-bottom: 18px;
+      color: #203337;
+    }
+
+    .learn-heading p {
+      color: #6B5D58;
+      font-size: 1.08rem;
+    }
+
+    .learn-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .learn-card {
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(32,51,55,.12);
+      border-radius: 34px;
+      padding: 30px;
+      box-shadow: 0 24px 70px rgba(32,51,55,.08);
+    }
+
+    .learn-card span {
+      font-size: 2rem;
+    }
+
+    .learn-card h3 {
+      margin: 14px 0 10px;
+      color: #203337;
+    }
+
+    .learn-card p {
+      color: #6B5D58;
+    }
+
+    .story {
+      background: #F6EBDD;
+    }
+
+    .story-box {
+      background: white;
+      border-radius: 38px;
+      padding: 48px;
+      box-shadow: 0 24px 70px rgba(32,51,55,.08);
+      border: 1px solid rgba(32,51,55,.12);
+    }
+
+    .story-box p {
+      font-size: 1.08rem;
+      color: #6B5D58;
+      margin-bottom: 20px;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .compare-box {
+      background: white;
+      border-radius: 34px;
+      padding: 34px;
+      border: 1px solid rgba(32,51,55,.12);
+      box-shadow: 0 24px 70px rgba(32,51,55,.08);
+    }
+
+    .compare-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .compare-box ul {
+      padding-left: 20px;
+      color: #6B5D58;
+      line-height: 2;
+    }
+
+    .compare-box.montessori h3 {
+      color: #C5203E;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .faq {
+      background: #F6EBDD;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid rgba(32,51,55,.12);
+      border-radius: 24px;
+      padding: 26px 30px;
+      margin-bottom: 16px;
+      box-shadow: 0 14px 40px rgba(32,51,55,.06);
+    }
+
+    .faq-item h3 {
+      margin-bottom: 10px;
+      color: #203337;
+    }
+
+    .faq-item p {
+      color: #6B5D58;
+      margin-bottom: 0;
+    }
+
+    .learn-cta {
+      text-align: center;
+      padding: 95px 20px;
+      background:
+        radial-gradient(circle at 10% 30%, rgba(255,179,102,.25), transparent 32%),
+        linear-gradient(135deg,#FFF9F0,#FFE8D3);
+    }
+
+    .learn-cta h2 {
+      font-family: Cormorant Garamond, serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .learn-cta p {
+      color: #6B5D58;
+      max-width: 700px;
+      margin: 0 auto 28px;
+      font-size: 1.08rem;
+    }
+
+    @media(max-width: 850px) {
+      .learn-grid,
+      .comparison,
+      .areas-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story-box {
+        padding: 30px;
+      }
+    }
+  /* ---------- Breadcrumb ---------- */
+
+.breadcrumb{
+    width:min(1120px,92%);
+    margin:110px auto 0;
+    font-size:.95rem;
+    color:#6B5D58;
+}
+
+.breadcrumb a{
+    color:#C5203E;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.breadcrumb span{
+    margin:0 8px;
+}
+
+/* ---------- Related Resources ---------- */
+
+.related-resources{
+    padding:90px 20px;
+    background:#FCFAF6;
+}
+
+.related-resources h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(2.4rem,5vw,4.2rem);
+    color:#203337;
+    margin-bottom:30px;
+}
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.related-card{
+    display:block;
+    background:#fff;
+    padding:34px;
+    border-radius:28px;
+    border:1px solid rgba(32,51,55,.10);
+    box-shadow:0 20px 60px rgba(32,51,55,.08);
+    text-decoration:none;
+    color:inherit;
+    transition:.28s ease;
+     cursor:pointer;
+}
+
+.related-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 26px 70px rgba(32,51,55,.12);
+}
+.related-card:hover h3{
+    color:#d64667;
+}
+.related-card span{
+    font-size:2rem;
+}
+
+.related-card h3{
+    margin:18px 0 12px;
+    color:#203337;
+}
+
+.related-card p{
+    color:#6B5D58;
+    line-height:1.7;
+}
+  </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "@id":"https://www.twgmontessori.ca/montessori-materials.html#article",
+  "headline":"Montessori Materials Explained",
+  "description":"Learn what Montessori materials are, why they are different from toys, and how they help children develop independence, concentration, confidence, and a lifelong love of learning.",
+  "image":"https://www.twgmontessori.ca/assets/email_header.png",
+  "author":{
+    "@type":"Organization",
+    "name":"Together We Grow Montessori School",
+    "url":"https://www.twgmontessori.ca/"
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"Together We Grow Montessori School",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://www.twgmontessori.ca/assets/twg_round_logo.png"
+    }
+  },
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://www.twgmontessori.ca/montessori-materials.html"
+  },
+  "articleSection":"Montessori Education",
+  "keywords":[
+    "Montessori materials",
+    "Montessori learning materials",
+    "Montessori toys",
+    "Montessori classroom",
+    "Montessori education",
+    "Montessori preschool",
+    "Practical Life",
+    "Sensorial",
+    "Montessori materials explained"
+  ],
+  "inLanguage":"en-CA",
+  "datePublished":"2026-07-04",
+  "dateModified":"2026-07-04"
+}
+</script>
+  
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"What are Montessori materials?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Montessori materials are specially designed learning tools that help children understand concepts through hands-on exploration and independent discovery."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Are Montessori materials the same as Montessori toys?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Not exactly. Montessori educators use the term 'materials' because each item has a specific educational purpose rather than simply providing entertainment."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Do Montessori materials have to be wooden?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Many authentic Montessori materials are made from natural materials such as wood, glass, and metal, but the educational purpose is more important than the material itself."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Do children need Montessori materials at home?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. Children can benefit from Montessori principles through practical life activities using everyday household items. Independence and meaningful experiences are more important than owning many materials."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What are the five curriculum areas in Montessori?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"The five main curriculum areas are Practical Life, Sensorial, Language, Mathematics, and Cultural Studies."
+      }
+    }
+  ]
+}
+</script>
+  
+</head>
+
+<body>
+
+<header class="site-header" id="top">
+  <a class="brand" href="index.html" aria-label="Together We Grow Montessori School home">
+    <img src="assets/twg_round_logo.png" alt="Together We Grow Montessori School logo" />
+    <span>Together We Grow</span>
+  </a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html#why">Why Us</a>
+    <a href="index.html#philosophy">Philosophy</a>
+    <a href="index.html#program">Program</a>
+    <a href="index.html#day">A Day</a>
+    <a href="index.html#founder">Founder</a>
+    <a href="index.html#tour" class="nav-cta">Book a Tour</a>
+  </nav>
+</header>
+
+<main>
+  
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span>›</span>
+  <a href="parent-resources.html">Learn</a>
+  <span>›</span>
+  <span>Montessori Cultural Studies</span>
+</nav>
+  
+<section class="learn-hero">
+  <div>
+    <img src="assets/twg_round_logo.png"
+         alt="Together We Grow Montessori School logo" />
+
+    <p class="eyebrow red">Montessori Curriculum</p>
+
+<h1>Montessori Cultural Studies</h1>
+
+    <p>
+  Montessori Cultural Studies opens the child’s heart and mind to the wider world.
+  Through geography, science, nature, history, art, music, and cultural exploration,
+  children develop curiosity, respect, observation skills, and a joyful sense of connection.
+</p>
+  </div>
+</section>
+
+<section class="learn-section story">
+  <div class="learn-wrap story-box">
+
+    <div class="learn-heading">
+      <p class="eyebrow red">WHAT ARE MONTESSORI MATERIALS?</p>
+      <h2>They are learning materials—not toys.</h2>
+    </div>
+
+    <p>
+      Montessori materials are scientifically designed learning tools created
+      to help children understand concepts through exploration and repetition.
+      Each material isolates one concept at a time, allowing children to learn
+      naturally through experience instead of memorization.
+    </p>
+
+    <p>
+      Unlike many commercial educational toys, Montessori materials are not
+      designed simply to entertain. Every material has a specific purpose,
+      carefully introducing one skill while preparing the child for future
+      learning. Children are free to choose materials independently, repeat
+      activities as often as needed, and develop confidence through successful
+      experiences.
+    </p>
+
+    <p>
+      At Together We Grow Montessori School, children use authentic Montessori
+      materials every day as part of a carefully prepared environment that
+      encourages independence, concentration, curiosity, and joyful learning.
+    </p>
+
+  </div>
+</section>
+
+<section class="learn-section">
+  <div class="learn-wrap">
+
+    <div class="learn-heading">
+      <p class="eyebrow red">MATERIALS VS TOYS</p>
+      <h2>Why Montessori educators use the word “materials.”</h2>
+    </div>
+
+    <p>
+      Many parents search online for “Montessori toys,” but in Montessori education,
+      we usually use the word <strong>materials</strong>. This is because each item in
+      the Montessori classroom is carefully chosen to support a specific developmental
+      purpose.
+    </p>
+
+    <p>
+      A toy may entertain a child for a short time. A Montessori material invites a child
+      to explore, repeat, concentrate, solve problems, and discover something meaningful.
+      The purpose is not simply to keep children busy, but to help them develop real skills
+      through hands-on experience.
+    </p>
+
+    <p>
+      For example, a child using a pouring activity is not only “playing with water.”
+      They are developing coordination, concentration, control of movement, independence,
+      and care for the environment. A child working with sensorial materials is not only
+      sorting colours or shapes. They are refining observation, comparison, order, and
+      early mathematical thinking.
+    </p>
+
+  </div>
+</section>
+    
+<section class="learn-section story">
+  <div class="learn-wrap">
+
+    <div class="learn-heading">
+      <p class="eyebrow red">WHY THEY ARE UNIQUE</p>
+      <h2>Five characteristics of authentic Montessori materials.</h2>
+    </div>
+
+    <div class="areas-grid">
+
+      <article class="learn-card">
+        <span>1️⃣</span>
+        <h3>One Concept at a Time</h3>
+        <p>
+          Each Montessori material is designed to isolate a single concept, allowing children to master one skill before moving to the next.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>2️⃣</span>
+        <h3>Built-in Control of Error</h3>
+        <p>
+          Many Montessori materials allow children to recognize and correct mistakes independently without relying on an adult.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>3️⃣</span>
+        <h3>Concrete Before Abstract</h3>
+        <p>
+          Children first learn with their hands before moving to symbols, numbers, writing, and abstract thinking.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>4️⃣</span>
+        <h3>Beautiful and Purposeful</h3>
+        <p>
+          Montessori materials are simple, attractive, and intentionally designed to encourage concentration rather than distraction.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>5️⃣</span>
+        <h3>Progressive Learning</h3>
+        <p>
+          Materials build upon one another, creating a carefully sequenced path from simple skills to more complex understanding.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+  <section class="learn-section">
+  <div class="learn-wrap">
+
+    <div class="learn-heading">
+      <p class="eyebrow red">THE MAIN CATEGORIES</p>
+      <h2>Five core areas of Montessori materials.</h2>
+
+      <p>
+        Montessori classrooms organize learning materials into carefully planned
+        curriculum areas. Each category supports a different aspect of child
+        development while building upon the skills learned in the previous area.
+      </p>
+    </div>
+
+    <div class="areas-grid">
+
+      <article class="learn-card">
+        <span>🧺</span>
+        <h3>Practical Life</h3>
+        <p>
+          Practical Life materials help children develop independence through
+          everyday activities such as pouring, spooning, dressing, food
+          preparation, cleaning, and caring for their environment.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>🎨</span>
+        <h3>Sensorial</h3>
+        <p>
+          Sensorial materials refine children's senses by exploring colour,
+          shape, size, texture, sound, weight, and dimension. These experiences
+          prepare children for mathematics, language, and scientific thinking.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>📚</span>
+        <h3>Language</h3>
+        <p>
+          Montessori Language materials build vocabulary, phonics, writing, and
+          reading through hands-on experiences that make literacy meaningful and
+          enjoyable.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>🔢</span>
+        <h3>Mathematics</h3>
+        <p>
+          Children first explore mathematical ideas using concrete materials
+          before progressing naturally to numbers, operations, and abstract
+          concepts.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>🌎</span>
+        <h3>Cultural Studies</h3>
+        <p>
+          Geography, science, biology, history, music, and art materials help
+          children discover the wider world while developing curiosity and
+          respect for different cultures.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>❤️</span>
+        <h3>Grace & Courtesy</h3>
+        <p>
+          While not represented by a single material, Grace and Courtesy lessons
+          teach kindness, respect, communication, patience, and positive social
+          interactions that support the classroom community.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="learn-section story">
+  <div class="learn-wrap">
+
+    <div class="learn-heading">
+      <p class="eyebrow red">HOW CHILDREN LEARN</p>
+      <h2>Montessori materials support the whole child's development.</h2>
+
+      <p>
+        Every Montessori material has a purpose beyond teaching a single academic
+        skill. Together, these carefully designed materials help children develop
+        independence, confidence, concentration, and a lifelong love of learning.
+      </p>
+    </div>
+
+    <div class="areas-grid">
+
+      <article class="learn-card">
+        <span>🌱</span>
+        <h3>Independence</h3>
+        <p>
+          Children choose, complete, and return materials independently, building
+          responsibility, confidence, and self-motivation from an early age.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>🎯</span>
+        <h3>Concentration</h3>
+        <p>
+          Repeating meaningful activities allows children to develop focus,
+          patience, and the ability to work without unnecessary interruption.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>🤲</span>
+        <h3>Fine Motor Development</h3>
+        <p>
+          Many Montessori materials strengthen hand muscles, coordination, and
+          precision, preparing children naturally for writing and everyday tasks.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>💡</span>
+        <h3>Problem-Solving</h3>
+        <p>
+          Instead of being given answers, children experiment, observe, make
+          corrections, and discover solutions through hands-on exploration.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>❤️</span>
+        <h3>Confidence</h3>
+        <p>
+          Success comes from children's own efforts. Completing meaningful work
+          independently helps them believe in their own abilities.
+        </p>
+      </article>
+
+      <article class="learn-card">
+        <span>📚</span>
+        <h3>A Love of Learning</h3>
+        <p>
+          Montessori materials encourage curiosity rather than competition,
+          helping children become enthusiastic learners who enjoy discovering
+          new ideas throughout life.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+  
+<section class="learn-section">
+  <div class="learn-wrap">
+
+    <div class="learn-heading">
+      <p class="eyebrow red">MONTESSORI AT HOME</p>
+      <h2>Do families need authentic Montessori materials at home?</h2>
+    </div>
+
+    <p>
+      One of the most common questions parents ask is whether they need to purchase
+      a complete set of Montessori materials to support their child's learning at
+      home. The answer is <strong>no</strong>.
+    </p>
+
+    <p>
+      While authentic Montessori materials are carefully designed and play an
+      important role in a Montessori classroom, children can continue developing
+      independence and practical life skills through everyday experiences at home.
+      Simple activities such as preparing snacks, folding laundry, watering plants,
+      sorting household objects, or helping set the table all reflect Montessori
+      principles.
+    </p>
+
+    <p>
+      Parents do not need expensive materials to create meaningful learning
+      opportunities. A calm environment, child-sized tools, opportunities for
+      independence, and respect for the child's natural curiosity are often far
+      more valuable than filling a home with educational products.
+    </p>
+
+    <p>
+      If you would like practical ideas for bringing Montessori into your daily
+      routine, explore our
+      <a href="montessori-activities-at-home.html"><strong>Montessori Activities at Home</strong></a>
+      guide, where we share simple activities families can enjoy using everyday
+      household materials.
+    </p>
+
+  </div>
+</section>
+<section class="learn-section faq">
+  <div class="learn-wrap">
+
+    <div class="learn-heading">
+      <p class="eyebrow red">Frequently Asked Questions</p>
+      <h2>Common questions about Montessori materials.</h2>
+    </div>
+
+    <div class="faq-item">
+      <h3>What are Montessori materials?</h3>
+      <p>
+        Montessori materials are specially designed learning tools that help
+        children understand concepts through hands-on exploration and
+        independent discovery.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Are Montessori materials the same as Montessori toys?</h3>
+      <p>
+        Not exactly. While many parents search for "Montessori toys,"
+        educators generally use the term "Montessori materials" because each
+        item has a specific educational purpose.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do Montessori materials have to be wooden?</h3>
+      <p>
+        Many authentic Montessori materials are made from natural materials
+        such as wood, glass, and metal, but the educational purpose is more
+        important than the material itself.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do children need Montessori materials at home?</h3>
+      <p>
+        No. Children can develop Montessori skills through practical life
+        activities using everyday household items. Independence and meaningful
+        experiences matter more than owning expensive materials.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What are the five curriculum areas in Montessori?</h3>
+      <p>
+        Montessori classrooms include Practical Life, Sensorial, Language,
+        Mathematics, and Cultural Studies, all working together to support
+        the whole child's development.
+      </p>
+    </div>
+
+  </div>
+</section>
+  
+<section class="related-resources">
+  <div class="learn-wrap">
+
+    <p class="eyebrow red">Continue Learning</p>
+    <h2>Explore More Montessori Guides</h2>
+
+    <div class="related-grid">
+
+      <a href="about-montessori.html" class="related-card">
+        <span>📖</span>
+        <h3>What Is Montessori?</h3>
+        <p>Discover the foundations of Montessori education and why families choose this approach.</p>
+      </a>
+
+      <a href="montessori-vs-daycare.html" class="related-card">
+        <span>🏫</span>
+        <h3>Montessori vs Traditional Daycare</h3>
+        <p>Compare Montessori education with traditional childcare and preschool programs.</p>
+      </a>
+
+      <a href="montessori-activities-at-home.html" class="related-card">
+        <span>🌱</span>
+        <h3>Montessori Activities at Home</h3>
+        <p>Simple Montessori-inspired activities parents can enjoy using everyday household materials.</p>
+      </a>
+
+      <a href="parent-resources.html" class="related-card">
+        <span>📚</span>
+        <h3>Montessori Learning Library</h3>
+        <p>Browse our growing collection of Montessori guides for parents and families.</p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="learn-cta">
+
+  <h2>Experience Montessori in Action</h2>
+
+ <p>
+Learning about Montessori materials is only the beginning. The best way to understand how these carefully designed learning tools support children's development is to experience an authentic Montessori classroom in person. We invite you to visit Together We Grow Montessori School and see Montessori materials in action.
+</p>
+
+  <a href="index.html#tour" class="button primary">
+    Book a School Tour
+  </a>
+
+</section>
+  
+</main>
+
+<footer class="footer">
+  <img src="assets/twg_round_logo.png" alt="Together We Grow logo" />
+  <p class="script">Together We Grow</p>
+
+  <p>
+    <a href="https://maps.google.com/?q=Unit+200,+604+West+Broadway,+Vancouver,+BC+V5Z+1G1" target="_blank" rel="noopener">
+      Unit 200 – 604 West Broadway, Vancouver, BC
+    </a>
+    ·
+    <a href="mailto:info@twgmontessori.ca">info@twgmontessori.ca</a>
+    ·
+    <a href="tel:+16046578289">604-657-8289</a>
+  </p>
+
+  <p>© 2026 Together We Grow Montessori School. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
