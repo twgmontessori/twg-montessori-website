@@ -621,3 +621,17 @@ body{
     margin-top: 8px;
   }
 }
+@media (max-width: 920px) {
+  .site-header {
+    overflow: visible !important;
+  }
+
+  .nav.is-open {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    max-height: none !important;
+    pointer-events: auto !important;
+  }
+}
