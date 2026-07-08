@@ -237,7 +237,8 @@ document.querySelectorAll('a[href*="google.com/maps"], a[href*="maps.google.com"
     }
   });
 });
-});
+
+// Mobile hamburger menu
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 
@@ -256,3 +257,4 @@ if (menuToggle && nav) {
     });
   });
 }
+});
