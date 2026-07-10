@@ -217,50 +217,155 @@
         padding:30px;
       }
     }
+
+  /* ---------- Related Resources ---------- */
+
+.related-resources{
+  padding:90px 20px;
+  background:#FCFAF6;
+}
+
+.related-resources .learn-wrap{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+.related-resources h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(2.4rem,5vw,4.2rem);
+  color:#203337;
+  margin-bottom:30px;
+}
+
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.related-card{
+  display:block;
+  background:#fff;
+  padding:34px;
+  border-radius:28px;
+  border:1px solid rgba(32,51,55,.10);
+  box-shadow:0 20px 60px rgba(32,51,55,.08);
+  text-decoration:none;
+  color:inherit;
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease;
+}
+
+.related-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 26px 70px rgba(32,51,55,.12);
+}
+
+.related-card:hover h3{
+  color:#d64667;
+}
+
+.related-card span{
+  font-size:2rem;
+}
+
+.related-card h3{
+  margin:18px 0 12px;
+  color:#203337;
+}
+
+.related-card p{
+  color:#6B5D58;
+  line-height:1.7;
+}
+
+@media(max-width:850px){
+  .related-grid{
+    grid-template-columns:1fr;
+  }
+}
   </style>
 
- <script type="application/ld+json">
+<script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": "https://www.twgmontessori.ca/montessori-activities-at-home.html#article",
-  "headline": "Montessori Activities at Home: Simple Ideas for Ages 2–5",
-  "description": "Discover simple Montessori-inspired activities parents can do at home using everyday household materials to build independence, concentration, practical life skills, and confidence.",
-  "image": "https://www.twgmontessori.ca/assets/email_header.png",
-  "author": {
-    "@type": "Organization",
-    "name": "Together We Grow Montessori School",
-    "url": "https://www.twgmontessori.ca/"
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "@id":"https://www.twgmontessori.ca/montessori-vs-daycare.html#article",
+  "headline":"Montessori vs Daycare",
+  "description":"Compare Montessori preschool and traditional daycare. Learn the key differences in learning, independence, classroom environment, and early childhood development for Vancouver families.",
+  "image":"https://www.twgmontessori.ca/assets/email_header.png",
+  "author":{
+    "@type":"Organization",
+    "name":"Together We Grow Montessori School",
+    "url":"https://www.twgmontessori.ca/"
   },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Together We Grow Montessori School",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.twgmontessori.ca/assets/twg_round_logo.png"
+  "publisher":{
+    "@type":"Organization",
+    "name":"Together We Grow Montessori School",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://www.twgmontessori.ca/assets/twg_round_logo.png"
     }
   },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.twgmontessori.ca/montessori-activities-at-home.html"
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://www.twgmontessori.ca/montessori-vs-daycare.html"
   },
-  "articleSection": "Parent Resources",
-  "keywords": [
-    "Montessori activities",
-    "Montessori at home",
-    "Montessori activities for toddlers",
-    "Montessori preschool activities",
-    "Practical life activities",
-    "Montessori Vancouver",
-    "Montessori parenting"
+  "articleSection":"Parent Resources",
+  "keywords":[
+    "Montessori vs daycare",
+    "Montessori preschool vs daycare",
+    "traditional daycare",
+    "Montessori preschool Vancouver",
+    "early childhood education Vancouver",
+    "Together We Grow Montessori School"
   ],
-  "about": {
-    "@type": "Thing",
-    "name": "Montessori Activities"
-  },
-  "inLanguage": "en-CA",
-  "datePublished": "2026-06-01",
-  "dateModified": "2026-07-04"
+  "inLanguage":"en-CA",
+  "datePublished":"2026-06-01",
+  "dateModified":"2026-07-09"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Is Montessori better than daycare?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"It depends on what a family is looking for. Daycare provides supervision and care, while Montessori preschool provides care within an intentional educational environment focused on independence, concentration, and hands-on learning."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Does Montessori still include play?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. Montessori recognizes that children learn through meaningful activity. Children explore, move, communicate, create, and discover through purposeful work and social interaction."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Will Montessori prepare my child for kindergarten?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. Montessori supports independence, communication, social confidence, early literacy, early mathematics, practical life skills, and emotional readiness."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What age does Together We Grow accept?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Together We Grow Montessori School offers a full-day Montessori Casa program for children ages 2.5 to 5."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -456,6 +561,73 @@
   </div>
 </section>
 
+<section class="related-resources">
+  <div class="learn-wrap">
+
+    <p class="eyebrow red">Continue Learning</p>
+    <h2>Explore More Montessori Guides</h2>
+
+    <div class="related-grid">
+
+      <a href="montessori-philosophy.html" class="related-card">
+        <span>🌱</span>
+        <h3>Montessori Philosophy</h3>
+        <p>
+          Understand the principles of independence, respect, hands-on learning,
+          and child development that distinguish Montessori education.
+        </p>
+      </a>
+
+      <a href="practical-life-activities.html" class="related-card">
+        <span>🧺</span>
+        <h3>Practical Life Activities</h3>
+        <p>
+          Discover how meaningful everyday work helps children build confidence,
+          coordination, concentration, and responsibility.
+        </p>
+      </a>
+
+      <a href="preparing-for-montessori-preschool.html" class="related-card">
+        <span>🎒</span>
+        <h3>Preparing for Montessori Preschool</h3>
+        <p>
+          Learn how to support independence, routines, toileting,
+          self-care, and a confident transition into preschool.
+        </p>
+      </a>
+
+      <a href="kindergarten-readiness.html" class="related-card">
+        <span>🎓</span>
+        <h3>Kindergarten Readiness</h3>
+        <p>
+          Explore how Montessori supports social-emotional growth,
+          early academics, communication, and school readiness.
+        </p>
+      </a>
+
+      <a href="choosing-a-montessori-preschool-in-vancouver.html" class="related-card">
+        <span>🏫</span>
+        <h3>Choosing a Montessori Preschool in Vancouver</h3>
+        <p>
+          Learn what families should look for in philosophy, teachers,
+          classroom environment, communication, safety, and overall fit.
+        </p>
+      </a>
+
+      <a href="parent-resources.html" class="related-card">
+        <span>📚</span>
+        <h3>Parent Resources</h3>
+        <p>
+          Browse our complete library of Montessori articles,
+          curriculum guides, and practical resources for families.
+        </p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+  
 <section class="guide-cta">
   <h2>Experience Montessori in person.</h2>
   <p>
@@ -464,7 +636,7 @@
   </p>
   <a href="index.html#tour" class="button primary">Book a School Tour</a>
 </section>
-
+  
 </main>
 
 <footer class="footer">
