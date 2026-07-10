@@ -4,10 +4,12 @@
     <loc>https://www.twgmontessori.ca/</loc>
     <priority>1.0</priority>
   </url>
-</urlset>
 
-<url>
+  <url>
   <loc>https://www.twgmontessori.ca/choosing-a-montessori-preschool-in-vancouver.html</loc>
   <lastmod>2026-07-09</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
+  
+</urlset>
