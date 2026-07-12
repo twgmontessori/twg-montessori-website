@@ -143,16 +143,18 @@ if (message) {
     });
   }
 // GA4 - Track important website actions
-document.querySelectorAll('a[href="#tour"]').forEach((link) => {
-  link.addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "book_tour_click", {
-        event_category: "Engagement",
-        event_label: "Book a Tour Button"
-      });
-    }
+document
+  .querySelectorAll('a[href="#tour"], a[href$="index.html#tour"]')
+  .forEach((link) => {
+    link.addEventListener("click", () => {
+      if (typeof gtag === "function") {
+        gtag("event", "book_tour_click", {
+          event_category: "Engagement",
+          event_label: "Book a Tour Button"
+        });
+      }
+    });
   });
-});
 
 document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
   link.addEventListener("click", () => {
