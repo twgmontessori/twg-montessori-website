@@ -113,7 +113,7 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
     "
   >
     <img
-      src="https://www.twgmontessori.ca/assets/twg_email_header_v2.jpg"
+      src="https://www.twgmontessori.ca/assets/twg_email_header_final_exact_logo.png"
       alt="Together We Grow Montessori School"
       width="640"
       style="
