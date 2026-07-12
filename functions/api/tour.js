@@ -1,8 +1,17 @@
 export async function onRequestPost(context) {
   const formData = await context.request.formData();
   const get = (name) => String(formData.get(name) || "").trim();
-
-  const parentName = get("Parent Name");
+  
+const escapeHtml = (value) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+  
+  const parentName = get("Parent Name"); 
+  const safeParentName = escapeHtml(parentName);
   const email = get("Email").toLowerCase();
   const phone = get("Phone");
   const childName = get("Child Name");
@@ -24,7 +33,7 @@ export async function onRequestPost(context) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  const commonTypos = [
   "qq.cpm", "qq.cop",
-  "gamil.com", "gmial.com", "gmail.cpm", "gmail.cop", "gmail.con",
+  "gamil.com", "gmial.com", "gmail.cpm", "gmail.cop", "gmail.con","gmail.co",
   "hotmial.com", "hotmai.com", "hotmail.cpm", "hotmail.cop", "hotmail.con",
   "outlok.com", "outloo.com", "outlook.cpm", "outlook.cop", "outlook.con",
   "icloud.cpm", "icloud.cop", "icloud.con",
@@ -72,9 +81,6 @@ If you have any questions in the meantime, please feel free to reply to this ema
 Warm regards,
 Together We Grow Montessori School
 
-Unit 200 – 604 West Broadway
-Vancouver, BC V5Z 1G1
-
 📍 Unit 200 – 604 West Broadway
    Vancouver, BC V5Z 1G1
 
@@ -96,21 +102,22 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
   <td
     align="center"
     style="
-      padding:24px 28px 22px;
+      padding:16px;
       background:#fff7ef;
       border-bottom:1px solid #f2d9c7;
     "
   >
     <img
-      src="https://www.twgmontessori.ca/assets/email_header.png"
+      src="https://www.twgmontessori.ca/assets/twg_email_header_v2.jpg"
       alt="Together We Grow Montessori School"
-      width="560"
+      width="608"
       style="
         display:block;
         width:100%;
-        max-width:560px;
+        max-width:608px;
         height:auto;
         border:0;
+        border-radius:20px;
         margin:0 auto;
       "
     >
@@ -119,7 +126,7 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
 
         <tr>
           <td style="background:#ffffff;padding:34px 24px 24px;font-family:Arial,Helvetica,sans-serif;color:#1f2f33;">
-            <p style="font-size:22px;line-height:1.4;margin:0 0 20px;">Dear ${parentName},</p>
+            <p style="font-size:22px;line-height:1.4;margin:0 0 20px;">Dear ${safeParentName},</p>
 
             <p style="font-size:17px;line-height:1.7;margin:0 0 18px;">
               Thank you for your interest in <strong>Together We Grow Montessori School</strong>.
