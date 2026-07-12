@@ -93,18 +93,32 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;background:#fffaf5;border:1px solid #f2d9c7;border-radius:20px;overflow:hidden;">
         
         <tr>
-          <td align="center" style="padding:0;background:#fff7ef;">
-            <img
-             src="https://www.twgmontessori.ca/assets/email_header.png"
-              alt="Together We Grow Montessori School"
-              width="640"
-              style="display:block;width:100%;max-width:640px;height:auto;border:0;"
-            >
-          </td>
-        </tr>
+  <td
+    align="center"
+    style="
+      padding:24px 28px 22px;
+      background:#fff7ef;
+      border-bottom:1px solid #f2d9c7;
+    "
+  >
+    <img
+      src="https://www.twgmontessori.ca/assets/email_header.png"
+      alt="Together We Grow Montessori School"
+      width="560"
+      style="
+        display:block;
+        width:100%;
+        max-width:560px;
+        height:auto;
+        border:0;
+        margin:0 auto;
+      "
+    >
+  </td>
+</tr>
 
         <tr>
-          <td style="background:#ffffff;padding:28px 24px 24px;font-family:Arial,Helvetica,sans-serif;color:#1f2f33;">
+          <td style="background:#ffffff;padding:34px 24px 24px;font-family:Arial,Helvetica,sans-serif;color:#1f2f33;">
             <p style="font-size:22px;line-height:1.4;margin:0 0 20px;">Dear ${parentName},</p>
 
             <p style="font-size:17px;line-height:1.7;margin:0 0 18px;">
