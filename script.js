@@ -111,27 +111,29 @@ if (typeof gtag === "function") {
 }
        const message = document.getElementById("formMessage");
 
-message.className = "form-message success";
+if (message) {
+  message.className = "form-message success";
+  message.innerHTML =
+    "<strong>✓ Thank you!</strong><br>Your inquiry has been successfully received. We look forward to connecting with your family within <strong>1–2 business days</strong>.";
 
-message.innerHTML =
-"<strong>✓ Thank you!</strong><br>Your inquiry has been successfully received. We look forward to connecting with your family within <strong>1–2 business days</strong>.";
-
-message.scrollIntoView({
-    behavior:"smooth",
-    block:"center"
-});
+  message.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
       } catch (error) {
-       const message = document.getElementById("formMessage");
+  const message = document.getElementById("formMessage");
 
-message.className = "form-message error";
+  if (message) {
+    message.className = "form-message error";
+    message.innerHTML =
+      '<strong>Unable to submit.</strong><br>Please try again or email us directly at <strong>info@twgmontessori.ca</strong>.';
 
-message.innerHTML =
-"<strong>Unable to submit.</strong><br>Please try again or email us directly at <strong>info@twgmontessori.ca</strong>.";
-
-message.scrollIntoView({
-    behavior:"smooth",
-    block:"center"
-});
+    message.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }
       } finally {
         if (submitButton) {
           submitButton.disabled = false;
@@ -140,12 +142,11 @@ message.scrollIntoView({
       }
     });
   }
-  // GA4 - Track important website actions
+// GA4 - Track important website actions
 document.querySelectorAll('a[href="#tour"]').forEach((link) => {
   link.addEventListener("click", () => {
     if (typeof gtag === "function") {
       gtag("event", "book_tour_click", {
-        debug_mode: true,
         event_category: "Engagement",
         event_label: "Book a Tour Button"
       });
@@ -174,69 +175,55 @@ document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
     }
   });
 });
-// GA4 - Scroll Depth Tracking
+
+document
+  .querySelectorAll(
+    'a[href*="google.com/maps"], a[href*="maps.google.com"], a[href*="maps.app.goo.gl"]'
+  )
+  .forEach((link) => {
+    link.addEventListener("click", () => {
+      if (typeof gtag === "function") {
+        gtag("event", "map_click", {
+          event_category: "Contact",
+          event_label: link.href
+        });
+      }
+    });
+  });
+
+// GA4 - Scroll depth tracking
 const scrollMarks = [25, 50, 75, 90];
 const scrollTracked = {};
 
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+window.addEventListener(
+  "scroll",
+  () => {
+    const scrollTop = window.scrollY;
+    const scrollableHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
 
-  if (docHeight <= 0) return;
+    if (scrollableHeight <= 0) return;
 
-  const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+    const scrollPercent = Math.round(
+      (scrollTop / scrollableHeight) * 100
+    );
 
-  scrollMarks.forEach((mark) => {
-    if (scrollPercent >= mark && !scrollTracked[mark]) {
-      scrollTracked[mark] = true;
+    scrollMarks.forEach((mark) => {
+      if (scrollPercent >= mark && !scrollTracked[mark]) {
+        scrollTracked[mark] = true;
 
-      if (typeof gtag === "function") {
-        gtag("event", `scroll_${mark}`, {
-          debug_mode: true,
-          event_category: "Engagement",
-          event_label: `${mark}% Scroll`
-        });
+        if (typeof gtag === "function") {
+          gtag("event", "scroll_depth", {
+            event_category: "Engagement",
+            event_label: `${mark}%`,
+            percent_scrolled: mark
+          });
+        }
       }
-    }
-  });
-});
-
-// GA4 - Contact Click Tracking
-document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
-  link.addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "phone_click", {
-        debug_mode: true,
-        event_category: "Contact",
-        event_label: link.href
-      });
-    }
-  });
-});
-
-document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
-  link.addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "email_click", {
-        debug_mode: true,
-        event_category: "Contact",
-        event_label: link.href
-      });
-    }
-  });
-});
-
-document.querySelectorAll('a[href*="google.com/maps"], a[href*="maps.google.com"]').forEach((link) => {
-  link.addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "map_click", {
-        debug_mode: true,
-        event_category: "Contact",
-        event_label: link.href
-      });
-    }
-  });
-});
+    });
+  },
+  { passive: true }
+);
 
 // Mobile hamburger menu
 const menuToggle = document.querySelector(".menu-toggle");
