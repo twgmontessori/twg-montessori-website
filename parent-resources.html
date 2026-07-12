@@ -18,6 +18,10 @@
   <style>
     body{background:#FCFAF6;}
 
+    .nav a[aria-current="page"] {
+  color: #d64667;
+}
+    
     .library-hero{
       text-align:center;
       padding:120px 20px 90px;
@@ -319,15 +323,24 @@
     <span>Together We Grow</span>
   </a>
 
+  <button
+  type="button"
+  class="menu-toggle"
+  aria-label="Open menu"
+  aria-expanded="false"
+>
+  ☰
+</button>
+  
   <nav class="nav" aria-label="Main navigation">
-    <a href="index.html#why">Why Us</a>
-    <a href="index.html#philosophy">Philosophy</a>
-    <a href="index.html#program">Program</a>
-    <a href="parent-resources.html">Parent Resources</a>
-    <a href="index.html#day">A Day</a>
-    <a href="index.html#founder">Founder</a>
-    <a href="index.html#tour" class="nav-cta">Book a Tour</a>
-  </nav>
+  <a href="index.html#why">Why Us</a>
+  <a href="index.html#philosophy">Philosophy</a>
+  <a href="index.html#program">Program</a>
+  <a href="parent-resources.html" aria-current="page">Resources</a>
+  <a href="admissions.html">Admissions</a>
+  <a href="index.html#founder">Founder</a>
+  <a href="index.html#tour" class="nav-cta">Book a Tour</a>
+</nav>
 </header>
 
 <main>
@@ -707,12 +720,11 @@
   <a href="index.html#tour" class="button primary">Book a School Tour</a>
 </section>
 
-</main>
-
-  <section class="continue-exploring" aria-labelledby="continue-title">
+<section class="continue-exploring" aria-labelledby="continue-title">
   <div class="continue-inner">
     <p class="eyebrow">Continue Exploring</p>
     <h2 id="continue-title">Continue Your Montessori Journey</h2>
+
     <p class="continue-intro">
       Learn more about our programs, admissions process, and how to visit Together We Grow Montessori School.
     </p>
@@ -728,7 +740,7 @@
         <small>Discover our classroom experience →</small>
       </a>
 
-      <a class="continue-card" href="index.html#tour">
+      <a class="continue-card" href="admissions.html">
         <span>Admissions</span>
         <small>Learn about enrollment →</small>
       </a>
@@ -740,7 +752,9 @@
     </div>
   </div>
 </section>
-  
+
+</main>
+
 <footer class="footer">
   <img src="assets/twg_round_logo.png" alt="Together We Grow logo" />
   <p class="script">Together We Grow</p>
