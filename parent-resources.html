@@ -21,6 +21,36 @@
     .nav a[aria-current="page"] {
   color: #d64667;
 }
+
+    .page-breadcrumb {
+  padding: 14px 20px;
+  background: #fcfaf6;
+  border-bottom: 1px solid rgba(32, 51, 55, 0.08);
+}
+
+.page-breadcrumb-inner {
+  width: min(1600px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 1rem;
+  color: #6b5d58;
+}
+
+.page-breadcrumb a {
+  color: #c5203e;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.page-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.page-breadcrumb span[aria-current="page"] {
+  color: #6b5d58;
+}
     
     .library-hero{
       text-align:center;
@@ -31,10 +61,12 @@
         linear-gradient(135deg,#FFF9F0 0%,#FFF1E2 55%,#FFE0C1 100%);
     }
 
-    .library-hero img{
-      width:115px;
-      margin-bottom:20px;
-    }
+    .library-hero img {
+  display: block;
+  width: 115px;
+  height: auto;
+  margin: 0 auto 20px;
+}
 
     .library-hero h1{
       font-family:Cormorant Garamond,serif;
@@ -57,9 +89,8 @@
     }
 
     .library-wrap{
-      width:min(1180px,92%);
-      margin:auto;
-    }
+    width:min(1320px,92%);
+}
 
     .library-heading{
       text-align:center;
@@ -264,6 +295,19 @@
     margin-right:auto;
     line-height:1.7;
 }
+
+@media (max-width: 600px) {
+  .page-breadcrumb {
+    padding: 12px 18px;
+  }
+
+  .page-breadcrumb-inner {
+    width: 100%;
+    gap: 12px;
+    font-size: 0.92rem;
+  }
+}
+    
 @media(max-width:900px){
 
 .library-stats-wrap{
@@ -343,6 +387,14 @@
 </nav>
 </header>
 
+<nav class="page-breadcrumb" aria-label="Breadcrumb">
+  <div class="page-breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Parent Resources</span>
+  </div>
+</nav>
+  
 <main>
 
 <section class="library-hero">
@@ -370,7 +422,7 @@
     </div>
 
     <div class="library-stat">
-    <strong>Designed</strong>
+    <strong>Created</strong>
     <span>for Families</span>
 </div>
 
