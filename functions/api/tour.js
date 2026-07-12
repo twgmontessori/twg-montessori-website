@@ -10,8 +10,13 @@ const escapeHtml = (value) =>
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
   
-  const parentName = get("Parent Name"); 
-  const safeParentName = escapeHtml(parentName);
+  const parentName = get("Parent Name");
+  
+const capitalizedName = parentName
+  .toLowerCase()
+  .replace(/\b\w/g, (char) => char.toUpperCase());
+
+const safeParentName = escapeHtml(capitalizedName);
   const email = get("Email").toLowerCase();
   const phone = get("Phone");
   const childName = get("Child Name");
@@ -102,7 +107,7 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
   <td
     align="center"
     style="
-      padding:16px;
+      padding:0;
       background:#fff7ef;
       border-bottom:1px solid #f2d9c7;
     "
@@ -117,7 +122,6 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
         max-width:608px;
         height:auto;
         border:0;
-        border-radius:20px;
         margin:0 auto;
       "
     >
