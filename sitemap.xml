@@ -3,27 +3,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-  <loc>https://www.twgmontessori.ca/</loc>
-  <lastmod>2026-07-11</lastmod>
-</url>
+    <loc>https://www.twgmontessori.ca/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
   <url>
-  <loc>https://www.twgmontessori.ca/admissions.html</loc>
-  <lastmod>2026-07-11</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.9</priority>
-</url>
+    <loc>https://www.twgmontessori.ca/programs.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
   <url>
-  <loc>https://www.twgmontessori.ca/team.html</loc>
-  <lastmod>2026-07-12</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-  
+    <loc>https://www.twgmontessori.ca/admissions.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.twgmontessori.ca/gallery.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.twgmontessori.ca/team.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://www.twgmontessori.ca/parent-resources.html</loc>
     <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
@@ -106,14 +124,14 @@
     <lastmod>2026-07-09</lastmod>
   </url>
 
-<url>
-  <loc>https://www.twgmontessori.ca/questions-to-ask-during-a-school-tour.html</loc>
-  <lastmod>2026-07-09</lastmod>
-</url>
+  <url>
+    <loc>https://www.twgmontessori.ca/questions-to-ask-during-a-school-tour.html</loc>
+    <lastmod>2026-07-09</lastmod>
+  </url>
 
-<url>
-  <loc>https://www.twgmontessori.ca/what-to-expect-at-a-montessori-school-visit.html</loc>
-  <lastmod>2026-07-09</lastmod>
-</url>
-  
+  <url>
+    <loc>https://www.twgmontessori.ca/what-to-expect-at-a-montessori-school-visit.html</loc>
+    <lastmod>2026-07-09</lastmod>
+  </url>
+
 </urlset>
