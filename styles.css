@@ -1111,3 +1111,25 @@ body{
     padding: 27px;
   }
 }
+
+/* Homepage Why Us refinement */
+
+.why .section-heading {
+  max-width: 1500px;
+}
+
+.why .section-heading h2 {
+  font-size: clamp(2.6rem, 3.1vw, 3.85rem);
+  white-space: nowrap;
+  letter-spacing: -0.035em;
+}
+
+@media (max-width: 1100px) {
+  .why .section-heading {
+    max-width: 850px;
+  }
+
+  .why .section-heading h2 {
+    white-space: normal;
+  }
+}
