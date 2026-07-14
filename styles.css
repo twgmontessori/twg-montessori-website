@@ -445,7 +445,7 @@ body{
   border-radius:0!important;
   box-shadow:none!important;
   filter:drop-shadow(0 20px 34px rgba(32,51,55,.08));
-  margin:0 auto 18px!important;
+  margin:-24px auto 18px!important;
 }
 .script-title{
   font-family:Pacifico,cursive!important;
@@ -491,7 +491,10 @@ body{
 }
 @media(max-width:560px){
   .hero-restore-1{min-height:calc(100vh - 70px);padding:54px 16px 64px}
-  .hero-restore-1 .hero-logo{width:150px!important}
+  .hero-restore-1 .hero-logo{
+  width:150px!important;
+  margin:-12px auto 16px!important;
+}
   .script-title{font-size:3.2rem!important;line-height:1.08!important}
 }
 .form-message{
