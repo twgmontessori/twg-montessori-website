@@ -510,11 +510,29 @@ body{
 }
 @media(max-width:560px){
   .hero-restore-1{min-height:calc(100vh - 70px);padding:54px 16px 64px}
+  .hero-restore-1 .hero-inner {transform: translateY(-14px);}
   .hero-restore-1 .hero-logo{
   width:150px!important;
   margin:-12px auto 16px!important;
 }
   .script-title{font-size:3.2rem!important;line-height:1.08!important}
+}
+.hero-restore-1 .script-title span {
+  display: block;
+  margin-top: 12px;
+}
+.hero-restore-1 .hero-subtitle {
+  max-width: 330px;
+  margin: 28px auto 0;
+  line-height: 1.65;
+}
+.hero-restore-1 .hero-actions {
+  margin-top: 28px;
+  margin-bottom: 30px;
+}
+.hero-restore-1 .hero-note {
+  margin-top: 0;
+}
 }
 .form-message{
     display:none;
