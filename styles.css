@@ -48,9 +48,28 @@ section:not(.hero){padding:95px 0}
 .feature-grid h3,.enrichment-grid h3,.area-card h3,.journey-grid h3{font-size:1.12rem;margin:12px 0 8px}
 .feature-grid p,.enrichment-grid p,.area-card p,.journey-grid p,.program-card p,.power-box p,.letter-card p,
 .purpose-card p{color:var(--muted)}.philosophy,.program,.team,.tour{background:var(--cream-2)}
-.philosophy-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:start}.quote-card,
-.purpose-card{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff,#FFF8EF);
-              border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:46px}
+.philosophy-layout {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 46px;
+  align-items: stretch;
+}
+
+.quote-card,
+.purpose-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fff, #FFF8EF);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 46px;
+}
+
+/* Only vertically centre the Philosophy quote card */
+.philosophy-layout .quote-card {
+  align-self: center;
+}
 .quote-card blockquote{font-family:Cormorant Garamond,serif;font-size:clamp(2.1rem,4vw,4rem);line-height:1.02;margin:0;color:var(--ink);letter-spacing:-.035em}
 .quote-card cite{display:block;margin-top:24px;color:var(--gold);font-weight:900;font-style:normal}
 .large-copy{font-size:1.1rem}.large-copy p{color:var(--muted);margin-bottom:22px}
