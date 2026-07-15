@@ -200,6 +200,40 @@
       line-height: 1.85;
     }
 
+    .program-overview-shell {
+  display: grid;
+}
+
+.program-overview-visual {
+  overflow: hidden;
+  border: 1px solid rgba(32, 51, 55, 0.1);
+  border-radius: 34px;
+  background: #f6ebdd;
+  box-shadow: 0 26px 76px rgba(32, 51, 55, 0.1);
+}
+
+.program-overview-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s ease;
+}
+
+.program-overview-visual:hover img {
+  transform: scale(1.025);
+}
+
+.program-overview-image-note {
+  margin: 11px 6px 28px;
+  color: #8b7469;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: right;
+}
+    
     .program-overview {
       display: grid;
       grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
@@ -645,6 +679,18 @@
     @media (max-width: 600px) {
       .page-breadcrumb {
         padding: 12px 18px;
+        .program-overview-visual {
+  border-radius: 26px;
+}
+
+.program-overview-visual img {
+  aspect-ratio: 4 / 3;
+}
+
+.program-overview-image-note {
+  margin: 9px 4px 24px;
+  text-align: left;
+}
       }
 
       .page-breadcrumb-inner {
@@ -824,7 +870,21 @@
   </section>
 
   <section class="programs-section">
-    <div class="programs-wrap">
+  <div class="programs-wrap">
+
+    <div class="program-overview-shell">
+
+      <div class="program-overview-visual">
+        <img
+          src="/assets/classroom-main.png"
+          alt="Concept rendering of a warm Montessori Casa classroom with natural light, child-sized furniture, and carefully prepared learning materials"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="program-overview-image-note">
+        Concept rendering of our future Montessori Casa environment.
+      </p>
 
       <div class="program-overview">
 
@@ -859,23 +919,28 @@
           <div class="program-facts">
 
             <div class="program-fact">
-  <strong>Regular Program Day</strong>
-  <span>Staggered classroom arrival between 8:00 and 9:00 AM, with regular dismissal by 5:00 PM</span>
-</div>
+              <strong>Age Group</strong>
+              <span>Children ages 2.5 to 5</span>
+            </div>
 
             <div class="program-fact">
               <strong>Classroom Model</strong>
-              <span>Mixed-age Montessori Casa community</span>
+              <span>A mixed-age Montessori Casa community</span>
             </div>
 
             <div class="program-fact">
               <strong>Regular Program Day</strong>
-              <span>Arrival by classroom schedule through 5:00 PM</span>
+              <span>
+                Staggered classroom arrival between 8:00 and 9:00 AM,
+                with regular dismissal by 5:00 PM
+              </span>
             </div>
 
             <div class="program-fact">
               <strong>Optional Extended Care</strong>
-              <span>Early care from 7:30 AM and late care until 6:00 PM</span>
+              <span>
+                Early care from 7:30 AM and late care until 6:00 PM
+              </span>
             </div>
 
             <div class="program-fact">
@@ -889,7 +954,9 @@
       </div>
 
     </div>
-  </section>
+
+  </div>
+</section>
 
   <section class="programs-section soft">
     <div class="programs-wrap">
