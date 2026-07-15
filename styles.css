@@ -1425,6 +1425,13 @@ body{
   transition: transform 0.55s ease;
 }
 
+.environment-caption{
+    margin-top:14px;
+    text-align:center;
+    font-size:.85rem;
+    color:#8b857a;
+    font-style:italic;
+}
 .environment-main-image:hover img {
   transform: scale(1.025);
 }
