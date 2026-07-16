@@ -308,54 +308,115 @@
       line-height: 1.65;
     }
 
-    .journey-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+   .journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
 
-    .journey-card {
-      padding: 34px;
-      border-radius: 30px;
-      border: 1px solid rgba(32, 51, 55, 0.1);
-      background: #fff;
-      box-shadow: 0 20px 58px rgba(32, 51, 55, 0.06);
-    }
+.journey-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(32, 51, 55, 0.1);
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 20px 58px rgba(32, 51, 55, 0.06);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
 
-    .journey-card span {
-      display: inline-block;
-      margin-bottom: 14px;
-      color: #d64667;
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
+.journey-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 76px rgba(32, 51, 55, 0.11);
+}
 
-    .journey-card h3 {
-      margin: 0 0 14px;
-      color: #203337;
-      font-size: 1.45rem;
-    }
+.journey-card-image {
+  height: 245px;
+  overflow: hidden;
+  background: #efe5da;
+}
 
-    .journey-card p {
-      margin: 0;
-      color: #6b5d58;
-      line-height: 1.78;
-    }
+.journey-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+/* Individual image positioning */
 
-    .journey-note {
-      max-width: 900px;
-      margin: 34px auto 0;
-      padding: 30px 34px;
-      text-align: center;
-      border-radius: 26px;
-      border: 1px solid #efd8c7;
-      background:
-        radial-gradient(
-          circle at 90% 10%,
-          rgba(255, 179, 102, 0.17),
-          transparent 30%
+.journey-card:nth-child(1) .journey-card-image img {
+  object-position: center;
+}
+
+.journey-card:nth-child(2) .journey-card-image img {
+  object-position: center;
+}
+
+.journey-card:nth-child(3) .journey-card-image img {
+  object-position: center;
+}
+    
+.journey-card:hover .journey-card-image img {
+  transform: scale(1.035);
+}
+
+.journey-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 30px 32px 34px;
+}
+
+.journey-card-content > span {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 14px;
+  color: #d64667;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.journey-card h3 {
+  margin: 0 0 14px;
+  color: #203337;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  line-height: 1.08;
+}
+
+.journey-card p {
+  margin: 0;
+  color: #6b5d58;
+  line-height: 1.78;
+}
+
+.journey-image-note {
+  margin: 13px 6px 0;
+  color: #8b7469;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: right;
+}
+  .journey-note {
+    max-width: 900px;
+    margin: 26px auto 0;
+    padding: 30px 34px;
+    text-align: center;
+    border-radius: 26px;
+    border: 1px solid #efd8c7;
+    background:
+      radial-gradient(
+        circle at 90% 10%,
+        rgba(255, 179, 102, 0.17),
+        transparent 30%
         ),
         #fff7ef;
     }
@@ -644,37 +705,52 @@
     }
 
     @media (max-width: 980px) {
-      .program-overview,
-      .daily-rhythm-layout {
-        grid-template-columns: 1fr;
-      }
+  .program-overview,
+  .daily-rhythm-layout {
+    grid-template-columns: 1fr;
+  }
 
-      .daily-rhythm-intro {
-        position: static;
-      }
+  .daily-rhythm-intro {
+    position: static;
+  }
 
-      .journey-grid,
-      .whole-child-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+  .whole-child-grid {
+    grid-template-columns: 1fr;
+  }
 
-    @media (max-width: 760px) {
-      .learning-grid,
-      .extended-care-panel,
-      .enrichment-grid-programs {
-        grid-template-columns: 1fr;
-      }
+  .journey-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-      .learning-card.wide {
-        grid-column: auto;
-      }
+@media (max-width: 760px) {
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
 
-      .rhythm-row {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-    }
+  .journey-card-image {
+    height: 230px;
+  }
+
+  .journey-image-note {
+    text-align: left;
+  }
+
+  .learning-grid,
+  .extended-care-panel,
+  .enrichment-grid-programs {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-card.wide {
+    grid-column: auto;
+  }
+
+  .rhythm-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
 
     @media (max-width: 600px) {
       .page-breadcrumb {
@@ -958,81 +1034,114 @@
   </div>
 </section>
 
-  <section class="programs-section soft">
-    <div class="programs-wrap">
+  <section class="programs-section soft journey-section">
+  <div class="programs-wrap">
 
-      <div class="programs-heading">
-        <p class="eyebrow red">The Three-Year Casa Journey</p>
+    <div class="programs-heading">
+      <p class="eyebrow red">The Three-Year Casa Journey</p>
 
-        <h2>
-          Children grow from newcomers into confident classroom leaders.
-        </h2>
+      <h2>
+        Children grow from newcomers into confident classroom leaders.
+      </h2>
 
-        <p>
-          The Montessori Casa experience is designed as a multi-year
-          journey. By remaining in a familiar prepared environment,
-          children build upon what they have already learned and
-          gradually take on new levels of independence, responsibility,
-          and leadership.
-        </p>
-      </div>
+      <p>
+        The Montessori Casa experience is designed as a multi-year
+        journey. By remaining in a familiar prepared environment,
+        children build upon what they have already learned and gradually
+        take on new levels of independence, responsibility, and leadership.
+      </p>
+    </div>
 
-      <div class="journey-grid">
+    <div class="journey-grid">
 
-        <article class="journey-card">
+      <article class="journey-card">
+        <div class="journey-card-image">
+          <img
+            src="/assets/journey-year-one.jpg"
+            alt="A younger Montessori child beginning to explore purposeful classroom work"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="journey-card-content">
           <span>Year One</span>
 
           <h3>Building the Foundation</h3>
 
           <p>
-            Children become familiar with classroom routines, build
-            trusting relationships, strengthen coordination, and begin
-            exploring Practical Life, Sensorial, Language, Mathematics,
-            and Cultural Studies through hands-on experience.
-          </p>
-        </article>
+  Children develop independence, concentration, and confidence through
+  purposeful hands-on work. During the first year, they build routines,
+  care for themselves and their environment, and begin exploring every
+  area of the Montessori curriculum.
+</p>
+        </div>
+      </article>
 
-        <article class="journey-card">
+      <article class="journey-card">
+        <div class="journey-card-image">
+          <img
+            src="/assets/journey-year-two.jpg"
+            alt="A Montessori child working independently with growing concentration and confidence"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="journey-card-content">
           <span>Year Two</span>
 
           <h3>Growing with Confidence</h3>
 
           <p>
-            As the environment becomes familiar, concentration deepens,
-            academic understanding expands, friendships grow, and
-            children begin contributing to classroom life with greater
-            confidence and independence.
-          </p>
-        </article>
+  As children gain experience, they deepen their curiosity, strengthen
+  problem-solving skills, and work with increasing independence. Their
+  confidence grows through meaningful choices and self-directed learning.
+</p>
+        </div>
+      </article>
 
-        <article class="journey-card">
+      <article class="journey-card">
+        <div class="journey-card-image">
+          <img
+            src="/assets/journey-year-three.jpg"
+            alt="An older Montessori child supporting a younger classmate with patience and care"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="journey-card-content">
           <span>Year Three</span>
 
-          <h3>Becoming a Leader</h3>
+          <h3>Leading with Kindness</h3>
 
           <p>
-            Older children refine reading, writing, mathematics,
-            executive functioning, social confidence, and responsibility
-            while naturally becoming role models for younger classmates.
-          </p>
-        </article>
-
-      </div>
-
-      <div class="journey-note">
-        <h3>The Power of Growing Together</h3>
-
-        <p>
-          Every child has the opportunity to experience different roles:
-          the newcomer who observes, the explorer who discovers, and the
-          leader who supports others. This progression develops not only
-          knowledge and skills, but empathy, patience, confidence, and
-          character.
-        </p>
-      </div>
+  Older children naturally mentor younger classmates, developing
+  leadership, empathy, and responsibility while reinforcing their own
+  knowledge. This mixed-age community is one of Montessori's greatest
+  strengths.
+</p>
+        </div>
+      </article>
 
     </div>
-  </section>
+
+    <p class="journey-image-note">
+      Concept imagery illustrating the developmental journey within a
+      Montessori Casa community.
+    </p>
+
+    <div class="journey-note">
+      <h3>The Power of Growing Together</h3>
+
+      <p>
+        Every child has the opportunity to experience different roles:
+        the newcomer who observes, the explorer who discovers, and the
+        leader who supports others. This progression develops not only
+        knowledge and skills, but empathy, patience, confidence, and character.
+      </p>
+    </div>
+
+  </div>
+</section>
 
   <section class="programs-section">
     <div class="programs-wrap">
