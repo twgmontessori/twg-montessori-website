@@ -717,31 +717,64 @@
       gap: 22px;
     }
 
-    .enrichment-card-programs {
-      padding: 30px;
-      border-radius: 28px;
-      border: 1px solid rgba(32, 51, 55, 0.1);
-      background: #fff;
-      box-shadow: 0 18px 50px rgba(32, 51, 55, 0.05);
-    }
+    .enrichment-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(32, 51, 55, 0.1);
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(32, 51, 55, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
 
-    .enrichment-card-programs span {
-      display: block;
-      margin-bottom: 18px;
-      font-size: 1.7rem;
-    }
+.enrichment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 68px rgba(32, 51, 55, 0.1);
+}
 
-    .enrichment-card-programs h3 {
-      margin: 0 0 10px;
-      color: #203337;
-      font-size: 1.3rem;
-    }
+.enrichment-image {
+  height: 220px;
+  overflow: hidden;
+  background: #f2e8dc;
+}
 
-    .enrichment-card-programs p {
-      margin: 0;
-      color: #6b5d58;
-      line-height: 1.72;
-    }
+.enrichment-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.enrichment-card:hover .enrichment-image img {
+  transform: scale(1.04);
+}
+
+.enrichment-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 28px 28px 32px;
+}
+
+.enrichment-content h3 {
+  margin: 0 0 12px;
+  color: #203337;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  line-height: 1.08;
+}
+
+.enrichment-content p {
+  margin: 0;
+  color: #6b5d58;
+  line-height: 1.75;
+}
 
     .extended-care-panel {
       display: grid;
@@ -838,6 +871,13 @@
 }
 
 @media (max-width: 760px) {
+  .enrichment-image {
+  height: 240px;
+}
+
+.enrichment-content {
+  padding: 28px;
+}
   .journey-grid {
     grid-template-columns: 1fr;
   }
@@ -1748,53 +1788,94 @@
 
       <div class="enrichment-grid-programs">
 
-        <article class="enrichment-card-programs">
-          <span>🎨</span>
+        <article class="enrichment-card">
 
-          <h3>Creative Arts</h3>
+  <div class="enrichment-image">
+    <img
+      src="/assets/enrichment-creative-arts.jpg"
+      alt="Children exploring creative arts through clay and hands-on expression"
+      loading="lazy"
+    />
+  </div>
 
-          <p>
-            Art, music, storytelling, and creative expression nurture
-            imagination, communication, and emotional development.
-          </p>
-        </article>
+  <div class="enrichment-content">
+    <h3>Creative Arts</h3>
 
-        <article class="enrichment-card-programs">
-          <span>🤸</span>
+    <p>
+      Children express ideas through drawing, painting, clay,
+      mixed media, music, and creative projects that encourage
+      imagination, confidence, and joyful self-expression.
+    </p>
+  </div>
 
-          <h3>Movement and Wellness</h3>
+</article>
 
-          <p>
-            Yoga, RBLM Motor Lab, and gross motor activities support
-            coordination, balance, body awareness, and physical
-            confidence.
-          </p>
-        </article>
+        <article class="enrichment-card">
 
-        <article class="enrichment-card-programs">
-          <span>🤖</span>
+  <div class="enrichment-image">
+    <img
+      src="/assets/enrichment-movement.jpg"
+      alt="Children practicing balance and movement activities together"
+      loading="lazy"
+    />
+  </div>
 
-          <h3>STEM Discovery</h3>
+  <div class="enrichment-content">
+    <h3>Movement &amp; Wellness</h3>
 
-          <p>
-            Robotics, LEGO experiences, and hands-on problem solving
-            introduce logical thinking, collaboration, design, and
-            experimentation.
-          </p>
-        </article>
+    <p>
+      Yoga, movement games, balance activities, and mindful exercises
+      help children strengthen coordination, body awareness,
+      confidence, and emotional well-being.
+    </p>
+  </div>
 
-        <article class="enrichment-card-programs">
-          <span>🌍</span>
+</article>
 
-          <h3>Language and Culture</h3>
+        <article class="enrichment-card">
 
-          <p>
-            French, music, cultural learning, and community experiences
-            help children become curious, respectful, and connected to
-            the wider world.
-          </p>
-        </article>
+  <div class="enrichment-image">
+    <img
+      src="/assets/enrichment-stem.jpg"
+      alt="Children exploring engineering and problem solving through hands-on STEM activities"
+      loading="lazy"
+    />
+  </div>
 
+  <div class="enrichment-content">
+    <h3>STEM Discovery</h3>
+
+    <p>
+      Hands-on investigations encourage children to explore science,
+      engineering, mathematics, design thinking, and creative
+      problem-solving through meaningful experiences.
+    </p>
+  </div>
+
+</article>
+
+  <article class="enrichment-card">
+
+  <div class="enrichment-image">
+    <img
+      src="/assets/enrichment-language-culture.jpg"
+      alt="Children participating in music and cultural learning experiences"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="enrichment-content">
+    <h3>Language &amp; Culture</h3>
+
+    <p>
+      Music, storytelling, celebrations, and multicultural experiences
+      broaden children's understanding of language, community,
+      and the world around them.
+    </p>
+  </div>
+
+</article>
+        
       </div>
 
     </div>
