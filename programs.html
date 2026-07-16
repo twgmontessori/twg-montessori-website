@@ -441,16 +441,65 @@
     }
 
     .learning-card {
-      padding: 34px;
-      border-radius: 30px;
-      border: 1px solid rgba(32, 51, 55, 0.1);
-      background: #fff;
-      box-shadow: 0 20px 58px rgba(32, 51, 55, 0.055);
-    }
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 30px;
+  border: 1px solid rgba(32, 51, 55, 0.1);
+  background: #fff;
+  box-shadow: 0 20px 58px rgba(32, 51, 55, 0.055);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
 
-    .learning-card.wide {
-      grid-column: 1 / -1;
-    }
+.learning-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 76px rgba(32, 51, 55, 0.11);
+}
+    .learning-card-image {
+  height: 270px;
+  overflow: hidden;
+  background: #f2e8dc;
+}
+
+.learning-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.learning-card:hover .learning-card-image img {
+  transform: scale(1.035);
+}
+
+.learning-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 30px 34px 34px;
+}
+    
+   .learning-card.wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+}
+
+.learning-card.wide .learning-card-image {
+  height: 100%;
+  min-height: 360px;
+}
+
+.learning-card.wide .learning-card-content {
+  justify-content: center;
+  padding: 44px;
+}
 
     .learning-card-number {
       display: inline-flex;
@@ -478,6 +527,7 @@
     }
 
     .learning-link {
+      margin-top: auto;
       color: #c5203e;
       font-weight: 800;
       text-decoration: none;
@@ -743,8 +793,21 @@
   }
 
   .learning-card.wide {
-    grid-column: auto;
-  }
+  grid-column: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.learning-card-image,
+.learning-card.wide .learning-card-image {
+  height: 240px;
+  min-height: 0;
+}
+
+.learning-card-content,
+.learning-card.wide .learning-card-content {
+  padding: 28px;
+}
 
   .rhythm-row {
     grid-template-columns: 1fr;
@@ -755,10 +818,53 @@
     @media (max-width: 600px) {
       .page-breadcrumb {
         padding: 12px 18px;
-        .program-overview-visual {
-  border-radius: 26px;
 }
+ .page-breadcrumb-inner {
+    width: 100%;
+    gap: 12px;
+    font-size: 0.92rem;
+  }
 
+  .programs-hero {
+    padding: 86px 18px 78px;
+  }
+
+  .programs-section {
+    padding: 74px 18px;
+  }
+
+  .program-overview-visual {
+    border-radius: 26px;
+  }
+
+  .program-overview-visual img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .program-overview-image-note {
+    margin: 9px 4px 24px;
+    text-align: left;
+  }
+
+  .program-overview-card,
+  .whole-child-card,
+  .extended-care-card {
+    padding: 27px;
+  }
+
+  .journey-card-content {
+    padding: 27px;
+  }
+
+  .learning-card-content,
+  .learning-card.wide .learning-card-content {
+    padding: 27px;
+  }
+
+  .rhythm-row {
+    padding: 21px 23px;
+  }
+}
 .program-overview-visual img {
   aspect-ratio: 4 / 3;
 }
@@ -890,15 +996,14 @@
     ☰
   </button>
 
-  <nav class="nav" aria-label="Main navigation">
-    <a href="index.html#why">Why Us</a>
-    <a href="index.html#philosophy">Philosophy</a>
-    <a href="programs.html" aria-current="page">Programs</a>
-    <a href="parent-resources.html">Resources</a>
-    <a href="admissions.html">Admissions</a>
-    <a href="team.html">Our Team</a>
-    <a href="index.html#tour" class="nav-cta">Book a Tour</a>
-  </nav>
+ <nav class="nav" aria-label="Main navigation">
+  <a href="programs.html" aria-current="page">Programs</a>
+  <a href="admissions.html">Admissions</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="parent-resources.html">Resources</a>
+  <a href="team.html">Our Team</a>
+  <a href="index.html#tour" class="nav-cta">Book a Tour</a>
+</nav>
 </header>
 
 <nav class="page-breadcrumb" aria-label="Breadcrumb">
