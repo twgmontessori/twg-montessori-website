@@ -871,13 +871,8 @@
 }
 
 @media (max-width: 760px) {
-  .enrichment-image {
-  height: 240px;
-}
 
-.enrichment-content {
-  padding: 28px;
-}
+  /* Journey */
   .journey-grid {
     grid-template-columns: 1fr;
   }
@@ -890,33 +885,30 @@
     text-align: left;
   }
 
+  /* Whole Child */
   .learning-grid,
   .extended-care-panel,
   .enrichment-grid-programs {
     grid-template-columns: 1fr;
   }
 
+  /* Enrichment */
+  .enrichment-image {
+    height: 240px;
+  }
+
+  .enrichment-content {
+    padding: 28px;
+  }
+
   .learning-card.wide {
-  grid-column: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.learning-card-image,
-.learning-card.wide .learning-card-image {
-  height: 240px;
-  min-height: 0;
-}
-
-.learning-card-content,
-.learning-card.wide .learning-card-content {
-  padding: 28px;
-}
+    grid-column: auto;
+  }
 
   .rhythm-row {
-  grid-template-columns: 46px minmax(0, 1fr);
-  gap: 4px 14px;
-  padding: 23px 20px;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 }
 
 .rhythm-row::before {
