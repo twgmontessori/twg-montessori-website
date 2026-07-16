@@ -657,38 +657,60 @@
       gap: 24px;
     }
 
-    .whole-child-card {
-      padding: 34px;
-      border-radius: 30px;
-      border: 1px solid rgba(32, 51, 55, 0.1);
-      background: #fff;
-      box-shadow: 0 20px 58px rgba(32, 51, 55, 0.055);
-    }
+   .whole-child-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid rgba(32, 51, 55, 0.10);
+  background: #fff;
+  box-shadow: 0 20px 58px rgba(32, 51, 55, 0.055);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
 
-    .whole-child-card span {
-      display: inline-flex;
-      width: 52px;
-      height: 52px;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      border-radius: 17px;
-      background: #fff1e7;
-      font-size: 1.45rem;
-    }
+.whole-child-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(32, 51, 55, 0.10);
+}
 
-    .whole-child-card h3 {
-      margin: 0 0 12px;
-      color: #203337;
-      font-size: 1.4rem;
-    }
+.whole-child-image {
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
 
-    .whole-child-card p {
-      margin: 0;
-      color: #6b5d58;
-      line-height: 1.75;
-    }
+.whole-child-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
 
+.whole-child-card:hover .whole-child-image img {
+  transform: scale(1.04);
+}
+
+.whole-child-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.whole-child-content h3 {
+  margin: 0 0 14px;
+  color: #203337;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  line-height: 1.08;
+}
+
+.whole-child-content p {
+  margin: 0;
+  color: #6b5d58;
+  line-height: 1.78;
+}
+    
     .enrichment-grid-programs {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -914,10 +936,13 @@
   }
 
   .program-overview-card,
-  .whole-child-card,
-  .extended-care-card {
-    padding: 27px;
-  }
+ .extended-care-card {
+  padding: 27px;
+}
+
+.whole-child-content {
+  padding: 26px;
+}
 
   .journey-card-content {
     padding: 27px;
@@ -1639,40 +1664,64 @@
       <div class="whole-child-grid">
 
         <article class="whole-child-card">
-          <span>☀️</span>
+  <div class="whole-child-image">
+    <img
+      src="/assets/whole-child-outdoor.jpg"
+      alt="Children exploring and gardening outdoors in a natural learning environment"
+      loading="lazy"
+    />
+  </div>
 
-          <h3>Daily Outdoor Learning</h3>
+  <div class="whole-child-content">
+    <h3>Outdoor Exploration</h3>
 
-          <p>
-            Dedicated outdoor periods offer opportunities for movement,
-            nature exploration, imaginative play, gross motor
-            development, cooperation, and joyful physical activity.
-          </p>
-        </article>
+    <p>
+      Dedicated outdoor periods offer opportunities for movement,
+      nature exploration, imaginative play, gross motor development,
+      cooperation, and joyful physical activity.
+    </p>
+  </div>
+</article>
 
-        <article class="whole-child-card">
-          <span>🌙</span>
+<article class="whole-child-card">
+  <div class="whole-child-image">
+    <img
+      src="/assets/whole-child-rest.jpg"
+      alt="A young child resting peacefully in a calm and comfortable environment"
+      loading="lazy"
+    />
+  </div>
 
-          <h3>Rest and Quiet Time</h3>
+  <div class="whole-child-content">
+    <h3>Rest &amp; Recharge</h3>
 
-          <p>
-            Children who need sleep are supported in resting comfortably.
-            Children who do not nap participate in peaceful alternatives
-            such as books, stories, quiet play, and calm individual work.
-          </p>
-        </article>
+    <p>
+      Children who need sleep are supported in resting comfortably.
+      Children who do not nap participate in peaceful alternatives
+      such as books, stories, quiet play, and calm individual work.
+    </p>
+  </div>
+</article>
 
-        <article class="whole-child-card">
-          <span>🤝</span>
+<article class="whole-child-card">
+  <div class="whole-child-image">
+    <img
+      src="/assets/whole-child-support.jpg"
+      alt="An educator offering respectful individual guidance to a young child"
+      loading="lazy"
+    />
+  </div>
 
-          <h3>Responsive Individual Support</h3>
+  <div class="whole-child-content">
+    <h3>Individual Guidance</h3>
 
-          <p>
-            Educators consider each child’s readiness, transitions,
-            regulation, family context, and developmental needs when
-            providing guidance and adapting daily experiences.
-          </p>
-        </article>
+    <p>
+      Educators consider each child’s readiness, transitions,
+      regulation, family context, and developmental needs when
+      providing guidance and adapting daily experiences.
+    </p>
+  </div>
+</article>
 
       </div>
 
