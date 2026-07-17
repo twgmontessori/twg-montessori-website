@@ -228,27 +228,6 @@ window.addEventListener(
 );
 
 // Mobile hamburger menu
-// Highlight the current page in the shared navigation
-const currentPage =
-  window.location.pathname.split("/").pop() || "index.html";
-
-const currentSectionMap = {
-  "parent-resources.html": "resources",
-  "admissions.html": "admissions",
-  "team.html": "team"
-};
-
-const currentSection = currentSectionMap[currentPage];
-
-if (currentSection) {
-  const currentNavLink = document.querySelector(
-    `.nav a[data-nav-section="${currentSection}"]`
-  );
-
-  if (currentNavLink) {
-    currentNavLink.setAttribute("aria-current", "page");
-  }
-}
   
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
