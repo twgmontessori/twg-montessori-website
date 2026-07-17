@@ -258,19 +258,49 @@
       gap:28px;
     }
 
-    .category-card{
-      background:#fff;
-      border:1px solid rgba(32,51,55,.10);
-      border-radius:34px;
-      padding:34px;
-      box-shadow:0 20px 60px rgba(32,51,55,.07);
-    }
+   .category-card {
+  position: relative;
+  min-height: 100%;
+  padding: 38px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(32, 51, 55, 0.09);
+  border-radius: 30px;
+  box-shadow: 0 20px 55px rgba(32, 51, 55, 0.07);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
 
-    .category-card h3{
-      color:#203337;
-      font-size:1.45rem;
-      margin-bottom:18px;
-    }
+.category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 38px;
+  right: 38px;
+  height: 3px;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(214, 70, 103, 0.72),
+    rgba(255, 179, 102, 0.62)
+  );
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(214, 70, 103, 0.16);
+  box-shadow: 0 27px 68px rgba(32, 51, 55, 0.1);
+}
+
+   .category-card h3 {
+  margin: 0 0 22px;
+  color: #203337;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.85rem;
+  line-height: 1.15;
+}
 
     .resource-list{
       list-style:none;
@@ -278,25 +308,57 @@
       margin:0;
     }
 
-    .resource-list li{
-      padding:13px 0;
-      border-bottom:1px solid rgba(32,51,55,.08);
-      color:#6B5D58;
-    }
+    .resource-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(32, 51, 55, 0.08);
+  color: #6b5d58;
+}
 
     .resource-list li:last-child{
       border-bottom:none;
     }
 
-    .resource-list a{
-      color:#203337;
-      font-weight:800;
-      text-decoration:none;
-    }
+    .resource-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: #203337;
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.55;
+  text-decoration: none;
+  transition:
+    color 0.22s ease,
+    transform 0.22s ease;
+}
 
-    .resource-list a:hover{
-      color:#d64667;
-    }
+.resource-list a::after {
+  content: "→";
+  flex: 0 0 auto;
+  color: #d64667;
+  font-weight: 800;
+  opacity: 0.68;
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.resource-list a:hover {
+  color: #d64667;
+  transform: translateX(2px);
+}
+
+.resource-list a:hover::after {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.resource-list a:focus-visible {
+  outline: 3px solid rgba(214, 70, 103, 0.24);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
 
     .coming-soon{
       color:#A08F86;
