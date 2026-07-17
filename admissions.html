@@ -52,18 +52,17 @@
     body { background:#FCFAF6; }
 
     .admissions-hero {
-      min-height:78vh;
-      display:grid;
-      place-items:center;
-      text-align:center;
-      padding:120px 20px 90px;
-      position:relative;
-      overflow:hidden;
-      background:
-        radial-gradient(circle at 8% 80%, rgba(255,179,102,.26), transparent 32%),
-        radial-gradient(circle at 92% 12%, rgba(216,66,94,.10), transparent 28%),
-        linear-gradient(135deg,#FFF9F0 0%,#FFF1E1 52%,#FFE2C8 100%);
-    }
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 112px 22px 100px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 80%, rgba(255,179,102,.26), transparent 32%),
+    radial-gradient(circle at 92% 12%, rgba(216,66,94,.10), transparent 28%),
+    linear-gradient(135deg,#FFF9F0 0%,#FFF1E1 52%,#FFE2C8 100%);
+}
 
     .admissions-hero::after {
       content:"";
@@ -92,7 +91,7 @@
       line-height:1.75;
     }
 
-    .admissions-section { padding:90px 20px; }
+    .admissions-section {  padding: 100px 24px; }
     .admissions-wrap { width:min(1120px,92%); margin:auto; }
     .admissions-heading { max-width:820px; margin:0 auto 46px; text-align:center; }
     .admissions-heading h2 {
@@ -266,14 +265,31 @@
     }
     .admissions-cta p { max-width:720px; margin:0 auto 28px; color:#6B5D58; line-height:1.75; }
 
-    .breadcrumb {
-      width:min(1120px,92%);
-      margin:105px auto 0;
-      font-size:.95rem;
-      color:#6B5D58;
-    }
-    .breadcrumb a { color:#C5203E; text-decoration:none; font-weight:700; }
-    .breadcrumb span { margin:0 8px; }
+   .page-breadcrumb {
+  padding: 14px 20px;
+  background: #fcfaf6;
+  border-bottom: 1px solid rgba(32, 51, 55, 0.08);
+}
+
+.page-breadcrumb-inner {
+  width: min(1600px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #6b5d58;
+  font-size: 1rem;
+}
+
+.page-breadcrumb a {
+  color: #c5203e;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.page-breadcrumb a:hover {
+  text-decoration: underline;
+}
 
     .nav a[aria-current="page"] {
       color:#D8425E;
@@ -398,23 +414,24 @@
 
   <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
 
-  <nav class="nav" aria-label="Main navigation">
-    <a href="index.html#why">Why Us</a>
-    <a href="index.html#philosophy">Philosophy</a>
-    <a href="index.html#program">Program</a>
-    <a href="parent-resources.html">Resources</a>
-    <a href="admissions.html" aria-current="page">Admissions</a>
-    <a href="index.html#founder">Founder</a>
-    <a href="index.html#tour" class="nav-cta">Book a Tour</a>
-  </nav>
+ <nav class="nav" aria-label="Main navigation">
+  <a href="programs.html">Programs</a>
+  <a href="admissions.html" aria-current="page">Admissions</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="parent-resources.html">Resources</a>
+  <a href="team.html">Our Team</a>
+  <a href="index.html#tour" class="nav-cta">Book a Tour</a>
+</nav>
 </header>
 
 <main>
-  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <nav class="page-breadcrumb" aria-label="Breadcrumb">
+  <div class="page-breadcrumb-inner">
     <a href="index.html">Home</a>
-    <span>›</span>
-    <span>Admissions</span>
-  </nav>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Admissions</span>
+  </div>
+</nav>
 
   <section class="admissions-hero section-reveal">
     <div class="admissions-hero-inner">
@@ -461,7 +478,11 @@
             <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M32 18v15l10 6"/><path d="M32 10v4M32 50v4M10 32h4M50 32h4"/></svg>
           </span>
           <h3>Full-Day Program</h3>
-          <p>The regular Montessori program operates from 8:30 a.m. to 5:00 p.m., with optional extended-care services.</p>
+<p>
+  Families follow their assigned staggered classroom arrival time,
+  with regular dismissal by 5:00 p.m. Optional early and late care
+  are available by registration.
+</p>
         </article>
         <article class="admissions-card">
           <span class="eligibility-icon" aria-hidden="true">
@@ -489,7 +510,10 @@
         </article>
         <article class="admissions-card process-card">
           <h3>Admissions Follow-Up</h3>
-          <p>Our admissions team reviews your information and will normally contact you within 1–2 business days with suitable next steps.</p>
+         <p>
+  Our admissions team reviews your information and will contact you
+  with suitable next steps as soon as possible.
+</p>
         </article>
         <article class="admissions-card process-card">
           <h3>Visit the School</h3>
@@ -576,8 +600,9 @@
       </div>
 
       <div class="priority-note">
-        Priority considerations do not guarantee admission. Final decisions are also influenced by available spaces, age balance, desired start date, program suitability, and the needs of the classroom community.
-      </div>
+  These considerations help guide our decisions but do not guarantee
+  admission. Every placement remains subject to final school approval.
+</div>
     </div>
   </section>
 
@@ -607,7 +632,7 @@
           <h3>Fees, Selections & Preparedness</h3>
           <ul class="document-list">
             <li>Non-refundable registration fee</li>
-            <li>Security deposit equivalent to one month’s tuition</li>
+            <li>Required registration fee and security deposit</li>
             <li>Optional early drop-off, late pick-up, and lunch selections</li>
             <li>Pre-Authorized Debit form, when applicable</li>
             <li>Labeled Emergency Comfort Bag</li>
@@ -649,8 +674,14 @@
         <p>No. An inquiry, tour, interview, or waitlist application does not guarantee admission. Enrollment remains subject to available space, program suitability, classroom balance, and final approval.</p>
       </article>
       <article class="faq-item">
-        <h3>What are the regular and extended-care hours?</h3>
-        <p>The regular program operates from 8:30 a.m. to 5:00 p.m. Optional early drop-off is available from 7:30–8:30 a.m., and optional late pick-up is available from 5:00–6:00 p.m., subject to registration and availability.</p>
+       <h3>What are the regular and extended-care hours?</h3>
+<p>
+  Classroom arrival is staggered between 8:00 and 9:00 a.m.,
+  according to the child’s assigned class schedule, with regular
+  dismissal by 5:00 p.m. Optional early care is available from
+  7:30–8:30 a.m., and optional late care is available from
+  5:00–6:00 p.m., subject to registration and availability.
+</p>
       </article>
       <article class="faq-item">
         <h3>When is my child’s enrollment officially confirmed?</h3>
