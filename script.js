@@ -197,7 +197,26 @@ document
       }
     });
   });
+// GA4 - Track Montessori guide selections
+document
+  .querySelectorAll(
+    '.guide-card, .resource-list a[href$=".html"]'
+  )
+  .forEach((link) => {
+    link.addEventListener("click", () => {
+      if (typeof gtag !== "function") return;
 
+      const guideTitle =
+        link.querySelector("h3")?.textContent.trim() ||
+        link.textContent.trim();
+
+      gtag("event", "select_content", {
+        content_type: "montessori_guide",
+        item_id: link.getAttribute("href"),
+        link_text: guideTitle
+      });
+    });
+  });
 // GA4 - Scroll depth tracking
 const scrollMarks = [25, 50, 75, 90];
 const scrollTracked = {};
