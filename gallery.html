@@ -191,88 +191,283 @@
       line-height: 1.8;
     }
 
-    .gallery-category-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 26px;
-    }
+    /* Gallery feature images */
 
-    .gallery-category-card {
-      min-height: 390px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 34px;
-      border-radius: 32px;
-      overflow: hidden;
-      border: 1px solid rgba(32, 51, 55, 0.1);
-      background:
-        radial-gradient(
-          circle at 80% 18%,
-          rgba(255, 179, 102, 0.24),
-          transparent 34%
-        ),
-        linear-gradient(145deg, #fffaf4, #f3e8de);
-      box-shadow: 0 22px 62px rgba(32, 51, 55, 0.07);
-    }
+.gallery-feature-image,
+.gallery-split-image {
+  margin: 0;
+}
 
-    .gallery-category-card span {
-      display: inline-block;
-      margin-bottom: 12px;
-      color: #d64667;
-      font-size: 0.76rem;
-      font-weight: 900;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
+.gallery-feature-image {
+  overflow: hidden;
+  border-radius: 36px;
+  border: 1px solid rgba(32, 51, 55, 0.1);
+  background: #f4eadf;
+  box-shadow: 0 28px 76px rgba(32, 51, 55, 0.1);
+}
 
-    .gallery-category-card h3 {
-      margin: 0 0 12px;
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2.2rem, 4vw, 3.4rem);
-      line-height: 1;
-      color: #203337;
-    }
+.gallery-feature-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 8.5;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
 
-    .gallery-category-card p {
-      max-width: 520px;
-      margin: 0;
-      color: #6b5d58;
-      line-height: 1.75;
-    }
+.gallery-feature-image:hover img {
+  transform: scale(1.025);
+}
 
-    .gallery-coming-panel {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 46px;
-      text-align: center;
-      border-radius: 34px;
-      border: 1px solid #efd8c7;
-      background:
-        radial-gradient(
-          circle at 90% 10%,
-          rgba(255, 179, 102, 0.18),
-          transparent 32%
-        ),
-        #fff9f3;
-      box-shadow: 0 22px 62px rgba(32, 51, 55, 0.06);
-    }
+.gallery-feature-image figcaption,
+.gallery-split-image figcaption {
+  padding: 12px 8px 0;
+  color: #8b7469;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: right;
+}
 
-    .gallery-coming-panel h2 {
-      margin: 0 0 18px;
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(3rem, 5vw, 4.8rem);
-      line-height: 1;
-      color: #203337;
-    }
 
-    .gallery-coming-panel p:not(.eyebrow) {
-      max-width: 680px;
-      margin: 0 auto 28px;
-      color: #6b5d58;
-      line-height: 1.8;
-    }
+/* Curriculum cards */
 
+.curriculum-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.curriculum-gallery-card {
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid rgba(32, 51, 55, 0.11);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 22px 60px rgba(32, 51, 55, 0.07);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.curriculum-gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 72px rgba(32, 51, 55, 0.11);
+}
+
+.curriculum-gallery-card-wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: stretch;
+}
+
+.curriculum-gallery-image {
+  overflow: hidden;
+  background: #f2e9df;
+}
+
+.curriculum-gallery-image img {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s ease;
+}
+
+.curriculum-gallery-card:hover .curriculum-gallery-image img {
+  transform: scale(1.035);
+}
+
+.curriculum-gallery-card-wide .curriculum-gallery-image img {
+  height: 100%;
+  min-height: 390px;
+}
+
+.curriculum-gallery-content {
+  padding: 30px 32px 34px;
+}
+
+.gallery-card-number {
+  margin: 0 0 12px;
+  color: #d64667;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.curriculum-gallery-content h3 {
+  margin: 0 0 12px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  line-height: 1;
+  color: #203337;
+}
+
+.curriculum-gallery-content p:not(.gallery-card-number) {
+  margin: 0;
+  color: #6b5d58;
+  line-height: 1.75;
+}
+
+
+/* Split image and copy sections */
+
+.gallery-split-layout {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.gallery-split-reverse {
+  grid-template-columns: 1.18fr 0.82fr;
+}
+
+.gallery-split-copy {
+  max-width: 500px;
+}
+
+.gallery-split-copy h2 {
+  margin: 0 0 20px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  line-height: 0.98;
+  color: #203337;
+}
+
+.gallery-split-copy p:not(.eyebrow) {
+  margin: 0 0 24px;
+  color: #6b5d58;
+  font-size: 1.04rem;
+  line-height: 1.82;
+}
+
+.gallery-split-image {
+  overflow: hidden;
+  border-radius: 34px;
+  border: 1px solid rgba(32, 51, 55, 0.1);
+  background: #f3e9df;
+  box-shadow: 0 26px 70px rgba(32, 51, 55, 0.09);
+}
+
+.gallery-split-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s ease;
+}
+
+.gallery-split-image:hover img {
+  transform: scale(1.025);
+}
+
+.gallery-split-image figcaption {
+  padding: 11px 6px 0;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  color: #c5203e;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Outdoor section */
+
+.outdoor-gallery-section {
+  background:
+    radial-gradient(
+      circle at 10% 16%,
+      rgba(111, 140, 125, 0.11),
+      transparent 29%
+    ),
+    linear-gradient(135deg, #f8f5ed 0%, #eef3ec 100%);
+}
+
+.outdoor-overview-image {
+  margin-bottom: 36px;
+}
+
+.outdoor-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.outdoor-gallery-card {
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(32, 51, 55, 0.11);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 54px rgba(32, 51, 55, 0.07);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.outdoor-gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 28px 68px rgba(32, 51, 55, 0.11);
+}
+
+.outdoor-gallery-image {
+  overflow: hidden;
+  background: #e7eee6;
+}
+
+.outdoor-gallery-image img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s ease;
+}
+
+.outdoor-gallery-card:hover .outdoor-gallery-image img {
+  transform: scale(1.035);
+}
+
+.outdoor-gallery-content {
+  padding: 26px 26px 30px;
+}
+
+.outdoor-gallery-content h3 {
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.05rem;
+  line-height: 1;
+  color: #203337;
+}
+
+.outdoor-gallery-content p {
+  margin: 0;
+  color: #6b5d58;
+  line-height: 1.72;
+}
+
+
+/* Entrance section */
+
+.welcome-gallery-section {
+  background:
+    radial-gradient(
+      circle at 90% 18%,
+      rgba(255, 179, 102, 0.15),
+      transparent 30%
+    ),
+    #fcfaf6;
+}
+    
     .gallery-cta {
       padding: 100px 24px;
       text-align: center;
@@ -308,11 +503,47 @@
       gap: 14px;
     }
 
-    @media (max-width: 800px) {
-      .gallery-category-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    @media (max-width: 960px) {
+  .curriculum-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .curriculum-gallery-card-wide {
+    grid-column: auto;
+    display: block;
+  }
+
+  .curriculum-gallery-card-wide .curriculum-gallery-image img {
+    height: 340px;
+    min-height: 0;
+  }
+
+  .gallery-split-layout,
+  .gallery-split-reverse {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .gallery-split-copy {
+    max-width: 760px;
+  }
+
+  .gallery-split-reverse .gallery-split-image {
+    order: 2;
+  }
+
+  .gallery-split-reverse .gallery-split-copy {
+    order: 1;
+  }
+
+  .outdoor-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .outdoor-gallery-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
 
     @media (max-width: 600px) {
       .page-breadcrumb {
@@ -328,19 +559,78 @@
       .gallery-hero {
         padding: 86px 18px 78px;
       }
-
+       .gallery-hero h1 {
+    font-size: clamp(3.2rem, 15vw, 4.7rem);
+  }
       .school-gallery-section {
         padding: 74px 18px;
       }
+.school-gallery-heading {
+    margin-bottom: 34px;
+  }
+       .gallery-feature-image,
+  .gallery-split-image {
+    border-radius: 25px;
+  }
+      .gallery-feature-image img {
+    aspect-ratio: 4 / 3;
+  }
+    .gallery-feature-image figcaption,
+  .gallery-split-image figcaption {
+    text-align: left;
+    margin-left: 3px;
+  }
+ .curriculum-gallery-grid {
+    gap: 20px;
+  }
 
-      .gallery-category-card {
-        min-height: 320px;
-        padding: 28px;
-      }
+  .curriculum-gallery-card {
+    border-radius: 24px;
+  }
 
-      .gallery-coming-panel {
-        padding: 32px 26px;
-      }
+  .curriculum-gallery-image img,
+  .curriculum-gallery-card-wide .curriculum-gallery-image img {
+    height: 245px;
+  }
+       .curriculum-gallery-content {
+    padding: 25px 24px 28px;
+  }
+
+  .gallery-split-layout,
+  .gallery-split-reverse {
+    gap: 28px;
+  }
+
+  .gallery-split-image img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .outdoor-overview-image {
+    margin-bottom: 26px;
+  }
+       .outdoor-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .outdoor-gallery-card:last-child {
+    grid-column: auto;
+  }
+
+  .outdoor-gallery-card {
+    border-radius: 24px;
+  }
+
+  .outdoor-gallery-image img {
+    height: 245px;
+  }
+ .outdoor-gallery-content {
+    padding: 24px 24px 27px;
+  }
+
+  .gallery-cta {
+    padding: 78px 18px;
+  }
     }
   </style>
 
@@ -437,86 +727,326 @@
       <p class="eyebrow red">Our School</p>
 
       <h1>
-        A Beautiful Environment Taking Shape.
+        Explore Our Montessori Environment
       </h1>
 
       <p>
-        Follow the development of our Montessori classrooms, reception,
-        learning spaces, outdoor environment, and the thoughtful details
-        that will make Together We Grow feel like home.
+        Discover the thoughtfully prepared classrooms, learning spaces, outdoor environments, 
+        and family areas designed to inspire independence, curiosity, and a lifelong love of learning.
       </p>
 
     </div>
   </section>
 
-  <section class="school-gallery-section">
-    <div class="school-gallery-wrap">
+  <section class="school-gallery-section gallery-overview section-reveal">
+  <div class="school-gallery-wrap">
 
-      <div class="school-gallery-heading">
-        <p class="eyebrow red">Explore Our Environment</p>
+    <div class="school-gallery-heading">
+      <p class="eyebrow red">The Prepared Environment</p>
 
-        <h2>
-          Designed with purpose. Prepared with care.
-        </h2>
+      <h2>Our Montessori Classroom</h2>
 
-        <p>
-          As our school develops, this page will grow into a visual
-          collection of renderings, construction progress, prepared
-          Montessori environments, and future moments from school life.
-        </p>
-      </div>
+      <p>
+        Every element of our classroom is thoughtfully arranged to support
+        independence, concentration, purposeful movement, and a sense of
+        belonging. Child-sized furnishings, accessible materials, natural
+        light, and calm visual order allow children to explore with confidence.
+      </p>
+    </div>
 
-      <div class="gallery-category-grid">
+    <figure class="gallery-feature-image">
+      <img
+        src="assets/classroom-main.png"
+        alt="Concept rendering of a bright Montessori Casa classroom at Together We Grow Montessori School"
+        loading="eager"
+      />
 
-        <article class="gallery-category-card">
-          <span>Classrooms</span>
+      <figcaption>
+        Concept rendering of our future Montessori Casa environment.
+      </figcaption>
+    </figure>
 
-          <h3>Prepared Montessori Environments</h3>
+  </div>
+</section>
 
+
+<section class="school-gallery-section soft section-reveal">
+  <div class="school-gallery-wrap">
+
+    <div class="school-gallery-heading">
+      <p class="eyebrow red">Montessori Curriculum</p>
+
+      <h2>Five Areas of Discovery</h2>
+
+      <p>
+        The Casa classroom brings together five interconnected curriculum
+        areas. Each environment is carefully prepared so children can progress
+        from concrete, hands-on experience toward deeper understanding.
+      </p>
+    </div>
+
+    <div class="curriculum-gallery-grid">
+
+      <article class="curriculum-gallery-card">
+        <div class="curriculum-gallery-image">
+          <img
+            src="assets/practical-life-area.png"
+            alt="Concept rendering of the Practical Life area in a Montessori preschool classroom"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="curriculum-gallery-content">
+          <p class="gallery-card-number">01</p>
+          <h3>Practical Life</h3>
           <p>
-            Future renderings and photographs of our spacious Casa
-            classrooms, purposeful learning areas, and Montessori materials.
+            Purposeful everyday activities strengthen independence,
+            concentration, coordination, and care for the environment.
           </p>
-        </article>
+        </div>
+      </article>
 
-        <article class="gallery-category-card">
-          <span>Welcome</span>
 
-          <h3>Reception and Shared Spaces</h3>
+      <article class="curriculum-gallery-card">
+        <div class="curriculum-gallery-image">
+          <img
+            src="assets/sensorial-area.png"
+            alt="Concept rendering of the Sensorial area with Montessori materials"
+            loading="lazy"
+          />
+        </div>
 
+        <div class="curriculum-gallery-content">
+          <p class="gallery-card-number">02</p>
+          <h3>Sensorial</h3>
           <p>
-            Follow the development of our entrance, reception, hallway
-            gallery, family welcome areas, and shared community spaces.
+            Carefully sequenced materials help children refine perception,
+            classify information, and understand the qualities of the world.
           </p>
-        </article>
+        </div>
+      </article>
 
-        <article class="gallery-category-card">
-          <span>Outdoor Learning</span>
 
-          <h3>Movement, Nature, and Discovery</h3>
+      <article class="curriculum-gallery-card">
+        <div class="curriculum-gallery-image">
+          <img
+            src="assets/language-area.png"
+            alt="Concept rendering of the Language area in a Montessori Casa classroom"
+            loading="lazy"
+          />
+        </div>
 
+        <div class="curriculum-gallery-content">
+          <p class="gallery-card-number">03</p>
+          <h3>Language</h3>
           <p>
-            See how our enclosed outdoor environment is being designed
-            for gross motor development, nature exploration, creativity,
-            and joyful play.
+            A language-rich environment supports vocabulary, phonetic
+            awareness, writing, reading, communication, and self-expression.
           </p>
-        </article>
+        </div>
+      </article>
 
-        <article class="gallery-category-card">
-          <span>Our Journey</span>
 
-          <h3>From Vision to School Community</h3>
+      <article class="curriculum-gallery-card">
+        <div class="curriculum-gallery-image">
+          <img
+            src="assets/mathematics-area.png"
+            alt="Concept rendering of the Mathematics area with Montessori number materials"
+            loading="lazy"
+          />
+        </div>
 
+        <div class="curriculum-gallery-content">
+          <p class="gallery-card-number">04</p>
+          <h3>Mathematics</h3>
           <p>
-            Construction updates, design decisions, Montessori details,
-            and the milestones that bring Together We Grow to life.
+            Concrete materials make number, quantity, place value, operations,
+            and mathematical relationships visible and meaningful.
           </p>
-        </article>
+        </div>
+      </article>
 
-      </div>
+
+      <article class="curriculum-gallery-card curriculum-gallery-card-wide">
+        <div class="curriculum-gallery-image">
+          <img
+            src="assets/cultural-area.png"
+            alt="Concept rendering of the Cultural Studies area with geography, science, and nature materials"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="curriculum-gallery-content">
+          <p class="gallery-card-number">05</p>
+          <h3>Cultural Studies</h3>
+          <p>
+            Geography, science, nature, history, art, and global cultures
+            invite children to discover their place within a connected world.
+          </p>
+        </div>
+      </article>
 
     </div>
-  </section>
+
+  </div>
+</section>
+
+
+<section class="school-gallery-section section-reveal">
+  <div class="school-gallery-wrap gallery-split-layout">
+
+    <div class="gallery-split-copy">
+      <p class="eyebrow red">Rest & Well-Being</p>
+
+      <h2>A Calm Space to Rest and Recharge</h2>
+
+      <p>
+        For children who need daytime rest, our flexible nap environment is
+        arranged to feel calm, comfortable, and secure. Individual rest spaces,
+        softened lighting, and a quiet atmosphere support healthy daily rhythms.
+      </p>
+    </div>
+
+    <figure class="gallery-split-image">
+      <img
+        src="assets/nap-room.png"
+        alt="Concept rendering of the quiet nap and rest room at Together We Grow Montessori School"
+        loading="lazy"
+      />
+
+      <figcaption>
+        Concept rendering of our future rest environment.
+      </figcaption>
+    </figure>
+
+  </div>
+</section>
+
+
+<section class="school-gallery-section outdoor-gallery-section section-reveal">
+  <div class="school-gallery-wrap">
+
+    <div class="school-gallery-heading">
+      <p class="eyebrow red">Outdoor Exploration</p>
+
+      <h2>Movement, Nature, and Discovery</h2>
+
+      <p>
+        Our outdoor environment is designed as an extension of the classroom,
+        with opportunities for gross-motor development, imaginative play,
+        gardening, sensory exploration, observation, and connection with nature.
+      </p>
+    </div>
+
+    <figure class="gallery-feature-image outdoor-overview-image">
+      <img
+        src="assets/outdoor-overview.png"
+        alt="Concept overview of the Together We Grow Montessori School outdoor play environment"
+        loading="lazy"
+      />
+
+      <figcaption>
+        Concept rendering of our future enclosed outdoor environment.
+      </figcaption>
+    </figure>
+
+
+    <div class="outdoor-gallery-grid">
+
+      <article class="outdoor-gallery-card">
+        <div class="outdoor-gallery-image">
+          <img
+            src="assets/play-slide-equipment.png"
+            alt="Natural wooden playground and slide equipment in a Montessori outdoor environment"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="outdoor-gallery-content">
+          <h3>Active Outdoor Play</h3>
+          <p>
+            Natural climbing and slide equipment encourages balance,
+            coordination, confidence, strength, and joyful movement.
+          </p>
+        </div>
+      </article>
+
+      <article class="outdoor-gallery-card">
+  <div class="outdoor-gallery-image">
+    <img
+      src="assets/sand-play-area.png"
+      alt="Montessori preschool sand play area with a wooden sandbox, natural materials, and outdoor art wall"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="outdoor-gallery-content">
+    <h3>Sand Play</h3>
+    <p>
+      Sand play invites creativity, problem-solving, sensory exploration,
+      and cooperative social experiences through open-ended outdoor work.
+    </p>
+  </div>
+</article>
+
+      <article class="outdoor-gallery-card">
+        <div class="outdoor-gallery-image">
+          <img
+            src="assets/garden-area.png"
+            alt="Raised garden beds and flowers in a Montessori preschool outdoor environment"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="outdoor-gallery-content">
+          <h3>Gardening & Nature</h3>
+          <p>
+            Raised garden beds invite children to observe seasonal change,
+            care for living things, and experience growth firsthand.
+          </p>
+        </div>
+      </article>
+      
+    </div>
+
+  </div>
+</section>
+
+
+<section class="school-gallery-section welcome-gallery-section section-reveal">
+  <div class="school-gallery-wrap gallery-split-layout gallery-split-reverse">
+
+    <figure class="gallery-split-image">
+      <img
+        src="assets/admissions-entry-hallway.png"
+        alt="Concept rendering of the Together We Grow Montessori School entrance hallway and enclosed stroller parking"
+        loading="lazy"
+      />
+
+      <figcaption>
+        Concept rendering of our future entrance and hallway.
+      </figcaption>
+    </figure>
+
+    <div class="gallery-split-copy">
+      <p class="eyebrow red">A Warm Welcome</p>
+
+      <h2>Every Family’s Experience Begins at the Door</h2>
+
+      <p>
+        Our entrance and shared spaces are designed to feel calm, welcoming,
+        and easy to navigate. Natural materials, enclosed stroller parking,
+        thoughtful organization, and warm details help families feel at home
+        from the moment they arrive.
+      </p>
+
+      <a class="text-link" href="admissions.html">
+        Explore our admissions process →
+      </a>
+    </div>
+
+  </div>
+</section>
 
   <section class="school-gallery-section soft">
     <div class="school-gallery-wrap">
