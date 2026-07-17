@@ -359,17 +359,35 @@
   }
 }
     
-@media(max-width:900px){
+@media (max-width: 720px) {
+  .library-stats {
+    margin-top: -22px;
+    padding: 0 18px 34px;
+  }
 
-.library-stats-wrap{
-    grid-template-columns:1fr;
-}
+  .library-stats-wrap {
+    width: 100%;
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+  }
 
-.library-stat:not(:last-child){
-    border-right:none;
-    border-bottom:1px solid rgba(32,51,55,.08);
-}
+  .library-stat {
+    padding: 24px 20px;
+  }
 
+  .library-stat:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid rgba(32, 51, 55, 0.08);
+  }
+
+  .library-stat strong {
+    font-size: 2.25rem;
+    margin-bottom: 4px;
+  }
+
+  .library-stat span {
+    font-size: 0.94rem;
+  }
 }
     @media(max-width:980px){
       .featured-grid,
@@ -477,9 +495,9 @@
   <div class="library-stats-wrap">
 
     <div class="library-stat">
-     <strong>18</strong>
-<span>Montessori Guides</span>
-      </div>
+      <strong>18</strong>
+      <span>Montessori Guides</span>
+    </div>
 
     <div class="library-stat">
       <strong>6</strong>
@@ -487,12 +505,11 @@
     </div>
 
     <div class="library-stat">
-    <strong>Created</strong>
-    <span>for Families</span>
-</div>
+      <strong>100%</strong>
+      <span>Family-Focused</span>
+    </div>
 
   </div>
-   
 </section>
   
 <section class="library-section" id="featured">
