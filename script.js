@@ -217,6 +217,20 @@ document
       });
     });
   });
+  // GA4 - Track Parent Resources filter use
+document
+  .querySelectorAll(".filter-btn[data-filter]")
+  .forEach((button) => {
+    button.addEventListener("click", () => {
+      if (typeof gtag !== "function") return;
+
+      gtag("event", "resource_filter_click", {
+        filter_name: button.dataset.filter,
+        filter_label: button.textContent.trim(),
+        page_path: window.location.pathname
+      });
+    });
+  });
 // GA4 - Scroll depth tracking
 const scrollMarks = [25, 50, 75, 90];
 const scrollTracked = {};
