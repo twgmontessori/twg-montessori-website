@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (phoneInput) {
       phoneInput.addEventListener('input', () => {
-        let digits = phoneInput.value.replace(/\D/g, '').slice(0, 10);
-
+       const digits = phoneInput.value.replace(/\D/g, '').slice(0, 10);
         if (digits.length > 6) {
           phoneInput.value = `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
         } else if (digits.length > 3) {
@@ -30,7 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
       event.preventDefault();
 
       const emailInput = form.querySelector('[name="Email"]');
-      const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
+
+if (!emailInput) {
+  console.error("Tour form email field is missing.");
+  return;
+}
+
+const email = emailInput.value.trim().toLowerCase();
 
      const typoFixes = {
   'qq.cpm': 'qq.com',
