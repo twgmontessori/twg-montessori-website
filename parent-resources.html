@@ -407,6 +407,14 @@
   color:#fff;
   border-color:#d64667;
 }
+    .filter-btn:focus-visible {
+  outline: 3px solid rgba(214, 70, 103, 0.28);
+  outline-offset: 3px;
+}
+
+.guide-card[hidden] {
+  display: none;
+}
   </style>
 </head>
 
@@ -500,11 +508,42 @@
 </p>
     </div>
 
-    <div class="guide-filters" aria-label="Guide filters">
-  <button class="filter-btn active" type="button" data-filter="all">All Guides</button>
-  <button class="filter-btn" type="button" data-filter="foundation">Montessori Foundations</button>
-  <button class="filter-btn" type="button" data-filter="curriculum">Curriculum</button>
-  <button class="filter-btn" type="button" data-filter="parent">Parent Guides</button>
+    <div class="guide-filters" aria-label="Filter Montessori guides by topic">
+  <button
+    class="filter-btn active"
+    type="button"
+    data-filter="all"
+    aria-pressed="true"
+  >
+    All Guides
+  </button>
+
+  <button
+    class="filter-btn"
+    type="button"
+    data-filter="foundation"
+    aria-pressed="false"
+  >
+    Montessori Foundations
+  </button>
+
+  <button
+    class="filter-btn"
+    type="button"
+    data-filter="curriculum"
+    aria-pressed="false"
+  >
+    Curriculum
+  </button>
+
+  <button
+    class="filter-btn"
+    type="button"
+    data-filter="parent"
+    aria-pressed="false"
+  >
+    Parent Guides
+  </button>
 </div>
     
     <div class="featured-grid">
@@ -885,33 +924,44 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-
   const buttons = document.querySelectorAll(".filter-btn");
   const cards = document.querySelectorAll(".guide-card");
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-  buttons.forEach(function(button){
-
-    button.addEventListener("click", function(){
-
-      buttons.forEach(btn=>btn.classList.remove("active"));
-      button.classList.add("active");
-
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
       const filter = button.dataset.filter;
 
-      cards.forEach(function(card){
+      buttons.forEach(function (item) {
+        const isActive = item === button;
 
-        if(filter==="all" || card.dataset.category===filter){
-          card.style.display="block";
-        }else{
-          card.style.display="none";
-        }
-
+        item.classList.toggle("active", isActive);
+        item.setAttribute("aria-pressed", isActive ? "true" : "false");
       });
 
+      cards.forEach(function (card) {
+        const shouldShow =
+          filter === "all" || card.dataset.category === filter;
+
+        card.hidden = !shouldShow;
+
+        if (shouldShow && !reduceMotion) {
+          card.animate(
+            [
+              { opacity: 0, transform: "translateY(10px)" },
+              { opacity: 1, transform: "translateY(0)" }
+            ],
+            {
+              duration: 260,
+              easing: "ease-out"
+            }
+          );
+        }
+      });
     });
-
   });
-
 });
 </script>
 
