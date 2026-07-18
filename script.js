@@ -290,6 +290,12 @@ const nav = document.querySelector(".nav");
 if (menuToggle && nav) {
   const header = menuToggle.closest(".site-header");
 
+  if (!nav.id) {
+    nav.id = "main-navigation";
+  }
+
+  menuToggle.setAttribute("aria-controls", nav.id);
+
   const setMenuState = (isOpen) => {
     nav.classList.toggle("is-open", isOpen);
     menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
