@@ -1582,3 +1582,23 @@ body{
   outline-offset: 2px;
   box-shadow: 0 0 0 5px #c5203e;
 }
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .section-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
