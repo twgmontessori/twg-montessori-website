@@ -737,12 +737,69 @@
 </p>
       </div>
       <form class="tour-form" id="tourForm">
-        <label>Parent Name <input required name="Parent Name" type="text"></label>
-        <label>Email <input required name="Email" type="email"></label>
-        <label>Phone <input name="Phone" type="tel"></label>
-        <label>Child's Name <input name="Child Name" type="text"></label>
-        <label>Child's Date of Birth <input name="Child DOB" type="text" placeholder="MM / DD / YYYY" inputmode="numeric"></label>
-        <label>Desired Start Date <input name="Desired Start Date" type="text" placeholder="e.g. Fall 2026"></label>
+       <label>
+  Parent Name
+  <input
+    required
+    name="Parent Name"
+    type="text"
+    autocomplete="section-parent name"
+    autocapitalize="words"
+  >
+</label>
+
+<label>
+  Email
+  <input
+    required
+    name="Email"
+    type="email"
+    autocomplete="section-parent email"
+    autocapitalize="none"
+    spellcheck="false"
+  >
+</label>
+
+<label>
+  Phone
+  <input
+    name="Phone"
+    type="tel"
+    autocomplete="section-parent tel"
+    inputmode="tel"
+  >
+</label>
+
+<label>
+  Child's Name
+  <input
+    name="Child Name"
+    type="text"
+    autocomplete="section-child name"
+    autocapitalize="words"
+  >
+</label>
+
+<label>
+  Child's Date of Birth
+  <input
+    name="Child DOB"
+    type="text"
+    placeholder="MM / DD / YYYY"
+    inputmode="numeric"
+    autocomplete="section-child bday"
+  >
+</label>
+
+<label>
+  Desired Start Date
+  <input
+    name="Desired Start Date"
+    type="text"
+    placeholder="e.g. Fall 2026"
+    autocomplete="off"
+  >
+</label>
         <label>I'm interested in
           <select name="Interest">
             <option>Booking a tour</option>
