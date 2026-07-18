@@ -21,6 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
   ).matches;
 
   const messageScrollBehavior = prefersReducedMotion ? "auto" : "smooth";
+    const mainContent = document.querySelector("main");
+
+  if (mainContent) {
+    if (!mainContent.id) {
+      mainContent.id = "main-content";
+    }
+
+    if (!mainContent.hasAttribute("tabindex")) {
+      mainContent.setAttribute("tabindex", "-1");
+    }
+
+    if (!document.querySelector(".skip-link")) {
+      const skipLink = document.createElement("a");
+
+      skipLink.className = "skip-link";
+      skipLink.href = `#${mainContent.id}`;
+      skipLink.textContent = "Skip to main content";
+
+      skipLink.addEventListener("click", () => {
+        window.setTimeout(() => {
+          mainContent.focus();
+        }, 0);
+      });
+
+      document.body.prepend(skipLink);
+    }
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('visible');
