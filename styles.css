@@ -1568,3 +1568,17 @@ body{
     border-top: 1px solid rgba(32, 51, 55, 0.11);
   }
 }
+/* Accessible keyboard focus */
+:where(
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  summary,
+  [tabindex]:not([tabindex="-1"])
+):focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #c5203e;
+}
