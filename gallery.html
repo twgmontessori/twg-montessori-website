@@ -615,10 +615,6 @@
     gap: 28px;
   }
 
-  .gallery-split-image img {
-    aspect-ratio: 4 / 3;
-  }
-
   .outdoor-overview-image {
     margin-bottom: 26px;
   }
@@ -646,6 +642,15 @@
     padding: 78px 18px;
   }
     }
+      /* Show complete gallery environment renderings */
+.gallery-feature-image img,
+.gallery-split-image img {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center;
+}
   </style>
 
   <script type="application/ld+json">
