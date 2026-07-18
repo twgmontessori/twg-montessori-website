@@ -16,6 +16,11 @@ if (typeof window.clarity !== "function") {
   })(window, document, "clarity", "script", "xgd54msohn");
 }
 document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const messageScrollBehavior = prefersReducedMotion ? "auto" : "smooth";
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -139,9 +144,9 @@ if (message) {
     "<strong>✓ Thank you!</strong><br>Your inquiry has been successfully received. We look forward to connecting with your family within <strong>1–2 business days</strong>.";
 
   message.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
+  behavior: messageScrollBehavior,
+  block: "center"
+});
 }
       } catch (error) {
   const message = document.getElementById("formMessage");
@@ -151,10 +156,10 @@ if (message) {
     message.innerHTML =
       '<strong>Unable to submit.</strong><br>Please try again or email us directly at <strong>info@twgmontessori.ca</strong>.';
 
-    message.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
+   message.scrollIntoView({
+  behavior: messageScrollBehavior,
+  block: "center"
+});
   }
       } finally {
         if (submitButton) {
