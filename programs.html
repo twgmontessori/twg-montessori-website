@@ -995,9 +995,13 @@
     border-radius: 26px;
   }
 
-  .program-overview-visual img {
-    aspect-ratio: 4 / 3;
-  }
+ .program-overview-visual img {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+}
 
   .program-overview-image-note {
     margin: 9px 4px 24px;
@@ -1021,6 +1025,35 @@
   .whole-child-content {
     padding: 26px;
   }
+    .programs-cta {
+  padding: 76px 18px;
+}
+
+.programs-cta h2 {
+  max-width: 350px;
+  font-size: 2.65rem;
+  line-height: 1.03;
+  margin-bottom: 22px;
+}
+
+.programs-cta p:not(.eyebrow) {
+  max-width: 340px;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+.programs-cta-actions {
+  width: min(100%, 310px);
+  margin-inline: auto;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.programs-cta-actions .button {
+  width: 100%;
+  box-sizing: border-box;
+}
 }
   </style>
 
