@@ -1466,8 +1466,9 @@ body{
 .environment-main-image img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
   object-position: center;
   transition: transform 0.55s ease;
 }
@@ -1559,10 +1560,6 @@ body{
 
   .environment-main-image {
     border-radius: 26px;
-  }
-
-  .environment-main-image img {
-    aspect-ratio: 4 / 3;
   }
 
   .environment-features {
