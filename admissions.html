@@ -368,39 +368,104 @@
       .priority-grid { grid-template-columns:repeat(2,1fr); }
     }
 
-    @media(max-width:620px) {
-      .admissions-welcome {
-  padding: 64px 18px 10px;
-}
+    @media (max-width: 620px) {
+  .admissions-welcome {
+    padding: 64px 18px 10px;
+  }
 
-.admissions-welcome-copy {
-  margin-bottom: 30px;
-}
+  .admissions-welcome-copy {
+    margin-bottom: 30px;
+  }
 
-.admissions-welcome-copy h2 {
-  font-size: clamp(2.5rem, 12vw, 3.6rem);
-}
+  .admissions-welcome-copy h2 {
+    font-size: 2.65rem;
+    line-height: 1.03;
+  }
 
-.admissions-entry-image {
-  border-radius: 26px;
-}
+  .admissions-entry-image {
+    border-radius: 26px;
+  }
 
-.admissions-entry-image img {
-  aspect-ratio: 4 / 3;
-}
+  .admissions-entry-image img {
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center;
+  }
 
-.admissions-entry-note {
-  text-align: left;
-  margin: 10px 4px 0;
+  .admissions-entry-note {
+    text-align: left;
+    margin: 10px 4px 0;
+  }
+
+  .admissions-hero {
+    min-height: auto;
+    padding: 82px 18px 72px;
+  }
+
+  .admissions-hero h1 {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3.15rem;
+    line-height: 1;
+  }
+
+  .admissions-hero p:not(.eyebrow) {
+    max-width: 350px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .admissions-heading h2 {
+    font-size: 2.55rem;
+    line-height: 1.03;
+  }
+
+  .admissions-heading p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .interview-panel h2 {
+    font-size: 2.6rem;
+    line-height: 1.03;
+  }
+
+  .admissions-cta {
+    padding: 76px 18px;
+  }
+
+  .admissions-cta h2 {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.65rem;
+    line-height: 1.03;
+  }
+
+  .admissions-cta p {
+    max-width: 340px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .eligibility-grid,
+  .process-grid,
+  .documents-grid,
+  .priority-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admissions-section {
+    padding: 72px 18px;
+  }
+
+  .interview-panel {
+    padding: 30px 24px;
+  }
 }
-      .admissions-hero { min-height:auto; padding:110px 18px 80px; }
-      .eligibility-grid,
-      .process-grid,
-      .documents-grid { grid-template-columns:1fr; }
-      .priority-grid { grid-template-columns:1fr; }
-      .admissions-section { padding:72px 18px; }
-      .interview-panel { padding:30px 24px; }
-    }
   </style>
 
   <script type="application/ld+json">
