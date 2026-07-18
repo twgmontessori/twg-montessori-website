@@ -515,7 +515,8 @@ body{
   }
 
   .hero-restore-1 .hero-inner {
-    transform: translateY(-12px);
+    padding-inline: 18px;
+    box-sizing: border-box;
   }
 
   .hero-restore-1 .hero-logo {
@@ -543,12 +544,22 @@ body{
   }
 
   .hero-restore-1 .hero-actions {
-    margin-top: 28px;
-    margin-bottom: 26px;
+    width: min(100%, 310px);
+    margin: 28px auto 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-restore-1 .hero-actions .button {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .hero-restore-1 .hero-note {
-    margin-top: 0;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-inline: 8px;
     line-height: 1.45;
   }
 }
