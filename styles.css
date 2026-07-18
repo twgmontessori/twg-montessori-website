@@ -1630,3 +1630,10 @@ body{
 .skip-link:focus-visible {
   transform: translateY(0);
 }
+.environment-main-image img {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center;
+}
