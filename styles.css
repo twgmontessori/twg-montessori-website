@@ -1630,10 +1630,17 @@ body{
 .skip-link:focus-visible {
   transform: translateY(0);
 }
-.environment-main-image img {
+/* Keep the homepage classroom image at its true 3:2 ratio */
+.environment-main-image {
   width: 100%;
   height: auto !important;
-  aspect-ratio: auto !important;
+}
+
+.environment-main-image img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 3 / 2 !important;
   object-fit: contain !important;
   object-position: center;
 }
