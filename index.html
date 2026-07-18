@@ -744,8 +744,13 @@
   <textarea name="Questions" rows="4"></textarea>
 </label>
 
-<div id="formMessage" class="form-message"></div>
-
+<div
+  id="formMessage"
+  class="form-message"
+  role="status"
+  aria-live="polite"
+  aria-atomic="true"
+></div>
 <button class="button primary" type="submit">
   Submit Inquiry
 </button>
