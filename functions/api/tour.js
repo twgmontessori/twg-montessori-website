@@ -89,7 +89,7 @@ Together We Grow Montessori School
 📍 Unit 200 – 604 West Broadway
    Vancouver, BC V5Z 1G1
 
-☎ 604-657-8289
+☎ 778-650-6789
 
 ✉ info@twgmontessori.ca
 
@@ -177,7 +177,7 @@ style="display:block;border:0;margin:0 0 30px;"
             <p style="font-size:14px;line-height:1.7;margin:0;color:#333;">
               <strong>Unit 200 – 604 West Broadway</strong><br>
               Vancouver, BC V5Z 1G1<br><br>
-              604-657-8289<br>
+              778-650-6789<br>
               <a href="mailto:info@twgmontessori.ca" style="color:#1f2f33;">info@twgmontessori.ca</a><br>
               <a href="https://www.twgmontessori.ca" style="color:#1f2f33;">www.twgmontessori.ca</a>
             </p>
