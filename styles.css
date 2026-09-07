@@ -153,6 +153,30 @@ section:not(.hero){padding:95px 0}
 .tour-form label{font-weight:900;color:var(--ink);font-size:.9rem}.tour-form input,.tour-form textarea,
 .tour-form select{width:100%;border:1px solid var(--line);border-radius:16px;padding:13px 14px;font-family:inherit;
                   margin-top:6px;background:#FCFAF6;color:var(--ink)}
+.tour-form .form-required-note {
+  margin: 0 0 2px;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.form-required-note span,
+.tour-form label > span[aria-hidden="true"] {
+  color: var(--red);
+  font-weight: 900;
+}
+
+.tour-form .optional-label {
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+.tour-form button:disabled {
+  cursor: not-allowed;
+  opacity: .72;
+}
 .small-note{font-size:.9rem;color:var(--muted)}
 .footer{text-align:center;padding:54px 20px;color:var(--muted)}.footer img{width:82px;margin:0 auto 12px}.footer .script{font-size:1.5rem;color:var(--ink);margin-bottom:8px}
 .section-reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}.section-reveal.visible{opacity:1;transform:none}
