@@ -11,12 +11,8 @@ const escapeHtml = (value) =>
     .replace(/'/g, "&#039;");
   
   const parentName = get("Parent Name");
-  
-const capitalizedName = parentName
-  .toLowerCase()
-  .replace(/\b\w/g, (char) => char.toUpperCase());
+  const safeParentName = escapeHtml(parentName);
 
-const safeParentName = escapeHtml(capitalizedName);
   const email = get("Email").toLowerCase();
   const phone = get("Phone");
   const childName = get("Child Name");
@@ -25,17 +21,37 @@ const safeParentName = escapeHtml(capitalizedName);
   const interest = get("Interest");
   const questions = get("Questions");
 
-  if (!parentName || !email) {
-    return new Response(JSON.stringify({
-      ok: false,
-      message: "Missing required fields."
-    }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" }
-    });
-  }
+  const formatDob = (value) => {
+    const match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
 
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!match) {
+      return value;
+    }
+
+    return `${match[2]}/${match[3]}/${match[1]}`;
+  };
+
+  const formattedChildDob = formatDob(childDob);
+
+  if (
+    !parentName ||
+    !email ||
+    !childName ||
+    !childDob ||
+    !desiredStart ||
+    !interest
+  ) {
+    return new Response(
+      JSON.stringify({
+        ok: false,
+        message: "Please complete all required fields."
+      }),
+      {
+        status: 400,
+        headers: { "Content-Type": "application/json" }
+      }
+    );
+  }
  const commonTypos = [
   "qq.cpm", "qq.cop",
   "gamil.com", "gmial.com", "gmail.cpm", "gmail.cop", "gmail.con","gmail.co",
@@ -65,7 +81,7 @@ Email: ${email}
 Phone: ${phone}
 
 Child Name: ${childName}
-DOB: ${childDob}
+DOB: ${formattedChildDob}
 Desired Start: ${desiredStart}
 Interest: ${interest}
 
@@ -77,23 +93,19 @@ ${questions}
 
 Thank you for your interest in Together We Grow Montessori School.
 
-We are delighted to hear from your family. Your inquiry has been successfully received.
-
-Our admissions team will carefully review your information and contact you within 1–2 business days.
+Your inquiry has been successfully received. Our admissions team will review your information and contact you within 1–2 business days.
 
 If you have any questions in the meantime, please feel free to reply to this email.
 
 Warm regards,
 Together We Grow Montessori School
 
-📍 Unit 200 – 604 West Broadway
-   Vancouver, BC V5Z 1G1
+Unit 200 – 604 West Broadway
+Vancouver, BC V5Z 1G1
 
-☎ 778-650-6789
-
-✉ info@twgmontessori.ca
-
-🌐 www.twgmontessori.ca
+778-650-6789
+info@twgmontessori.ca
+www.twgmontessori.ca
 
 Nurturing independence. Inspiring a lifelong love of learning.`;
 
@@ -130,15 +142,13 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
 
         <tr>
           <td style="background:#ffffff;padding:34px 24px 24px;font-family:Arial,Helvetica,sans-serif;color:#1f2f33;">
-            <p style="font-size:22px;line-height:1.4;margin:0 0 20px;">Dear ${safeParentName},</p>
+            <p style="font-size:22px;line-height:1.4;margin:0 0 20px;">Dear ${safeParentName},<p style="font-size:17px;line-height:1.7;margin:0 0 18px;">
+  Thank you for your interest in <strong>Together We Grow Montessori School</strong>.
+</p>
 
-            <p style="font-size:17px;line-height:1.7;margin:0 0 18px;">
-              Thank you for your interest in <strong>Together We Grow Montessori School</strong>.
-            </p>
-
-            <p style="font-size:17px;line-height:1.7;margin:0 0 18px;">
-              We are delighted to hear from your family. Your inquiry has been successfully received.
-            </p>
+<p style="font-size:17px;line-height:1.7;margin:0 0 22px;">
+  Your inquiry has been successfully received.
+</p>
 
             <p style="font-size:17px;line-height:1.7;margin:0 0 22px;">
               Our admissions team will carefully review your information and contact you within
@@ -149,9 +159,8 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
               <tr>
                 <td style="padding:18px 20px;font-family:Arial,Helvetica,sans-serif;">
                   <p style="font-size:18px;font-weight:bold;margin:0 0 12px;color:#1f2f33;">What happens next?</p>
-                  <p style="font-size:15px;line-height:1.7;margin:0 0 8px;">• We have received your inquiry.</p>
-                  <p style="font-size:15px;line-height:1.7;margin:0 0 8px;">• Our admissions team will carefully review your information.</p>
-                  <p style="font-size:15px;line-height:1.7;margin:0;">• We will contact you within <strong>1–2 business days</strong>.</p>
+                  <p style="font-size:15px;line-height:1.7;margin:0 0 8px;">• Our admissions team will review your information.</p>
+<p style="font-size:15px;line-height:1.7;margin:0;">• We will contact you within <strong>1–2 business days</strong>.</p>
                 </td>
               </tr>
             </table>
@@ -221,27 +230,57 @@ style="display:block;border:0;margin:0 0 30px;"
     })
   });
 
-  const parentResponse = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${context.env.RESEND_API_KEY}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      from: "Together We Grow Montessori School <noreply@twgmontessori.ca>",
-      to: [email],
-      reply_to: "info@twgmontessori.ca",
-      subject: "Thank you for your interest in Together We Grow Montessori School",
-      text: parentText,
-      html: parentHtml
-    })
-  });
+   if (!adminResponse.ok) {
+    console.error("Admin inquiry notification failed.");
 
-  if (!adminResponse.ok || !parentResponse.ok) {
-    return new Response("Failed", { status: 500 });
+    return new Response(
+      JSON.stringify({
+        ok: false,
+        message: "Unable to deliver the inquiry."
+      }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" }
+      }
+    );
   }
 
-  return new Response(JSON.stringify({ ok: true }), {
-    headers: { "Content-Type": "application/json" }
-  });
+  let confirmationEmailSent = false;
+
+  try {
+    const parentResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${context.env.RESEND_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        from: "Together We Grow Montessori School <noreply@twgmontessori.ca>",
+        to: [email],
+        reply_to: "info@twgmontessori.ca",
+        subject: "Thank you for your interest in Together We Grow Montessori School",
+        text: parentText,
+        html: parentHtml
+      })
+    });
+
+    confirmationEmailSent = parentResponse.ok;
+
+    if (!confirmationEmailSent) {
+      console.error("Parent confirmation email failed.");
+    }
+  } catch (error) {
+    console.error("Parent confirmation email request failed.");
+  }
+
+  return new Response(
+    JSON.stringify({
+      ok: true,
+      confirmationEmailSent
+    }),
+    {
+      status: 200,
+      headers: { "Content-Type": "application/json" }
+    }
+  );
 }
