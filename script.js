@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
-
+      let submissionSucceeded = false;
       const emailInput = form.querySelector('[name="Email"]');
 
 if (!emailInput) {
@@ -155,7 +155,8 @@ data.set("Email", emailInput.value.trim().toLowerCase());
           throw new Error('Form submission failed');
         }
 
-        form.reset();
+              submissionSucceeded = true;
+      form.reset();
 // Google Analytics 4 - Track Inquiry Conversion
 if (typeof gtag === "function") {
   gtag("event", "generate_lead", {
@@ -189,10 +190,15 @@ if (message) {
   block: "center"
 });
   }
-      } finally {
+            } finally {
         if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.textContent = originalButtonText;
+          if (submissionSucceeded) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Inquiry Submitted";
+          } else {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          }
         }
       }
     });
