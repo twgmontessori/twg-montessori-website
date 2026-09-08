@@ -52,6 +52,8 @@ const escapeHtml = (value) =>
       }
     );
   }
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
  const commonTypos = [
   "qq.cpm", "qq.cop",
   "gamil.com", "gmial.com", "gmail.cpm", "gmail.cop", "gmail.con","gmail.co",
