@@ -144,18 +144,17 @@ Nurturing independence. Inspiring a lifelong love of learning.`;
 
         <tr>
           <td style="background:#ffffff;padding:34px 24px 24px;font-family:Arial,Helvetica,sans-serif;color:#1f2f33;">
-            <p style="font-size:22px;line-height:1.4;margin:0 0 20px;">Dear ${safeParentName},<p style="font-size:17px;line-height:1.7;margin:0 0 18px;">
-  Thank you for your interest in <strong>Together We Grow Montessori School</strong>.
-</p>
+  <p style="font-size:22px;line-height:1.4;margin:0 0 20px;">
+    Dear ${safeParentName},
+  </p>
 
-<p style="font-size:17px;line-height:1.7;margin:0 0 22px;">
-  Your inquiry has been successfully received.
-</p>
+  <p style="font-size:17px;line-height:1.7;margin:0 0 18px;">
+    Thank you for your interest in <strong>Together We Grow Montessori School</strong>.
+  </p>
 
-            <p style="font-size:17px;line-height:1.7;margin:0 0 22px;">
-              Our admissions team will carefully review your information and contact you within
-              <strong>1–2 business days</strong>.
-            </p>
+  <p style="font-size:17px;line-height:1.7;margin:0 0 22px;">
+    Your inquiry has been successfully received.
+  </p>
 
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff7ef;border:1px solid #f1dacb;border-radius:16px;margin:22px 0;">
               <tr>
